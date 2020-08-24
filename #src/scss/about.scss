@@ -379,11 +379,10 @@
     }
 
     &__title {
-        @include maintext(70, 700, 60);
+        @include maintext(70, 900, 60);
         text-transform: uppercase;
         color: #404549;
         margin-bottom: 18px;
-        letter-spacing: 1px;
 
         @media (max-width: $md3+px) {
             font-size: 44px;

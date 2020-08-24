@@ -1,0 +1,823 @@
+.services-btn {
+    & > a {
+        display: inline-flex;
+        color: #fff;
+        min-height: 58px;
+        min-width: 292px;
+        padding: 15px 34px 15px 25px;
+        justify-content: space-between;
+        @include maintext(20,700,20);
+        text-transform: uppercase;
+        align-items: center;
+        background-color: #78a752;
+
+        & > .plus {
+            margin-left: 20px;
+            height: 27px;
+            width: 27px;
+
+            &:before {
+                height: 3px;
+            }
+            &:after {
+                width: 3px;
+            }
+        }
+    }
+}
+
+// ==== SERVICES BANNER =====================================================
+
+.services-banner {
+    position: relative;
+    min-height: 681px;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 52px;
+    padding-top: 20px;
+
+    @media (max-width: $md2+px) {
+        margin-bottom: 0;
+        display: block;
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        @media (max-width: $md2+px) {
+            position: relative;
+            height: 0;
+            padding-bottom: 65%;
+        }
+    }
+
+    &__body {
+        transform: translateY(17px);
+
+        @media (max-width: $md2+px) {
+            transform: translateY(-100px);
+            text-align: center;
+        }
+
+        @media (max-width: $md3+px) {
+            transform: translateY(-50px);
+        }
+    }
+
+    &__card {
+        display: inline-block;
+        padding: 59px 58px 61px 80px;
+        box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+        opacity: 0.96;
+
+        @media (max-width: $md2+px) {
+            text-align: left;
+        }
+
+        @media (max-width: $md3+px) {
+            text-align: center;
+            padding: 36px 40px 34px 47px;
+        }
+
+        @media (max-width: $md3+px) {
+            padding: 36px 15px 34px;
+        }
+
+    }
+
+
+    &__title {
+        @include maintext(70, 900, 60);
+        text-transform: uppercase;
+        color: #404549;
+        margin-bottom: 29px;
+
+        @media (max-width: $md3+px) {
+            font-size: 44px;
+            line-height: 46px;
+        }
+
+        @media (max-width: $md4+px) {
+            font-size: 40px;
+            line-height: 42px;
+        }
+
+    }
+
+    &__text {
+        @include text(16, 400, 26);
+        color: #404549;
+        max-width: 457px;
+        margin-bottom: 30px;
+    }
+
+    &__form {
+        max-width: 450px;
+    }
+}
+
+
+
+.form-services {
+    display: flex;
+
+    @media (max-width: $md4+px) {
+        display: block;
+    }
+
+    &__input-wrap {
+        flex: 1 1 auto;
+        margin-right: 4px;
+
+        @media (max-width: $md4+px) {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+    }
+    &__input {
+        width: 100%;
+        min-height: 45px;
+        background-color: #ffffff;
+        border: 1px solid #edf0f2;
+        padding-left: 30px;
+        @include text(18,400,18);
+        display: flex;
+        align-items: center;
+        color: #8c9297;
+
+        &.err {
+            border: 1px solid red;
+        }
+    }
+
+    &__submit-wrap {
+        flex: 0 0 140px;
+    }
+    &__submit {
+        &.btn-submit {
+            min-width: 140px;
+            min-height: 45px;
+            padding: 10px 15px;
+            justify-content: center;
+
+            & > span {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+// ==== AND SERVICES BANNER =====================================================
+
+
+
+
+
+
+// ==== SERVICES SUBBANNER INFO =====================================================
+.services-subbanner-info {
+    padding: 63px 0 38px;
+
+    @media (max-width: $md4+px) {
+        padding: 30px 0 30px;
+    }
+
+    &__body {
+        display: flex;
+        flex-wrap: wrap;
+
+        @media (max-width: $md2+px) {
+            display: block;
+        }
+    }
+    &__column {
+        margin-bottom: 56px;
+
+        @media (max-width: $md4+px) {
+            margin-bottom: 30px;
+        }
+
+        &_1 {
+            flex: 0 1 681 / 1235 * 100%;
+            padding-right: 20px;
+
+
+            & .services-subbanner-info__text {
+                max-width: 523px;
+
+                @media (max-width: $md2+px) {
+                    max-width: 700px;
+                    margin: 0 auto;
+                }
+            }
+
+            @media (max-width: $md2+px) {
+                padding-right: 0;
+            }
+        }
+        &_2 {
+            flex: 0 1 554 / 1235 * 100%;
+            display: flex;
+            align-items: center;
+        }
+        &_3 {
+            flex: 0 1 681 / 1235 * 100%;
+
+            @media (max-width: 1200px) {
+             flex: 0 1 100%;
+
+            }
+        }
+        &_4 {
+            flex: 0 1 554 / 1235 * 100%;
+            padding-left: 20px;
+            display: flex;
+            justify-content: flex-end;
+
+            @media (max-width: 1200px) {
+             padding-left: 0;
+              flex: 0 1 100%;
+            }
+
+            & .services-subbanner-info__text {
+                max-width: 488px;
+
+                @media (max-width: 1200px) {
+                 max-width: 700px;
+                 margin: 0 auto;
+                }
+            }
+
+
+        }
+    }
+    &__title {
+        @include maintext(30,700,40);
+        color: $textColor;
+        margin-bottom: 37px;
+
+        @media (max-width: $md2+px) {
+            text-align: center;
+        }
+
+        @media (max-width: $md4+px) {
+            margin-bottom: 20px;
+        }
+    }
+    &__text {
+        @include text(16,400,26);
+        color: #404549;
+
+        @media (max-width: $md4+px) {
+            font-size: 14px;
+            line-height: 24px;
+            text-align: center;
+        }
+
+        & p {
+           margin: 20px 0;
+        }
+    }
+    &__list {
+        max-width: 487px;
+        margin-top: 41px;
+        width: 100%;
+
+        @media (max-width: $md2+px) {
+            margin: 0 auto;
+        }
+
+        & > li {
+            min-height: 62px;
+            position: relative;
+            border: 1px solid #edf0f2;
+            @include text(24,300,34);
+            color: #404549;
+            display: flex;
+            align-items: center;
+            padding-left: 70px;
+            margin-bottom: 4px;
+            padding-right: 15px;
+
+            @media (max-width: $md4+px) {
+                font-size: 18px;
+                line-height: 30px;
+                padding-left: 45px;
+            }
+
+            &:before {
+                position: absolute;
+                content: url('../img/services/check.svg');
+                top: 50%;
+                left: 30px;
+                transform: translateY(-50%);
+
+                @media (max-width: $md4+px) {
+                    left: 10px;
+                }
+            }
+        }
+    }
+    &__card-wrap {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 15px;
+        max-width: 681px;
+        margin: 0 auto;
+
+        @media (max-width: $md3+px) {
+            display: block;
+        }
+    }
+    &__card {}
+    &__arrow-right {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-51%, 4%);
+
+        @media (max-width: $md3+px) {
+            transform: translate(-50%, -18%) rotate(90deg);
+        }
+    }
+}
+
+.card-services-info {
+    width: 296px;
+    height: 248px;
+    border: 1px solid #edf0f2;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 15px;
+
+    @media (max-width: $md3+px) {
+        margin: 0 auto;
+        &:first-child {
+            margin-bottom: 120px;
+        }
+    }
+
+    &__icon {
+        margin-bottom: 12px;
+        padding: 20px;
+    }
+    &__title {
+        text-align: center;
+        @include maintext(20,700,20);
+        color: $textColor;
+        text-transform: uppercase;
+    }
+}
+
+// ==== AND SERVICES SUBBANNER INFO =====================================================
+
+
+
+
+
+// ==== ENQUIRE ONLINE =====================================================
+.enquire-online {
+    background-color: #edf0f2;
+
+    &__body {
+        position: relative;
+        padding: 80px 0 71px;
+        min-height: 537px;
+        display: flex;
+        justify-content: flex-end;
+        &.container {
+            max-width: 919px;
+        }
+
+    }
+    &__img {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        @media (max-width: $md3+px) {
+            display: none;
+        }
+    }
+    &__inner {
+        max-width: 430px;
+        margin-right: 71px;
+
+        @media (max-width: $md2+px) {
+            margin-right: 0;
+        }
+
+        @media (max-width: $md3+px) {
+            text-align: center;
+            margin: 0 auto;
+        }
+    }
+
+    
+    &__title {
+        @include maintext(70, 900, 60);
+        text-transform: uppercase;
+        color: #404549;
+        margin-bottom: 38px;
+
+        @media (max-width: $md3+px) {
+            font-size: 44px;
+            line-height: 46px;
+        }
+
+        &>p {
+            &:last-child {
+                color: #e9933e;
+            }
+        }
+    }
+
+    &__subtitle {
+        color: #404549;
+        @include text(24,400,34);
+        margin-bottom: 41px;
+    }
+    &__link-btn {
+
+        &.services-btn {
+            & > a {
+                min-width: 282px;
+            }
+        }
+    }
+}
+
+// ==== AND ENQUIRE ONLINE =====================================================
+
+
+
+// ==== SERVICES INFORMATION =====================================================
+.services-information {
+    margin-bottom: 35px;
+
+    @media (max-width: $md4+px) {
+       margin-bottom: 0;
+    }
+    &__body {
+        display: flex;
+
+        @media (max-width: 1200px) {
+            display: block;
+        }
+    }
+    &__column {
+        flex: 0 1 50%;
+        &_1 {
+        }
+        &_2 {
+            display: flex;
+            align-items: center;
+            padding: 50px 15px 50px 47px;
+
+            @media (max-width: 1200px) {
+                 padding: 50px 15px 50px 15px;
+            }
+
+            @media (max-width: $md4+px) {
+                 padding: 20px 15px 50px 15px;
+            }
+        }
+    }
+    &__top {
+    }
+    &__bottom {}
+    &__difference {}
+}
+
+
+.top-services-information {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #8c9297;
+    padding-left: 15px;
+
+    &__inner {
+        max-width: 664px;
+        display: flex;
+        padding: 63px 15px 0 0;
+        color: #fff;
+
+        @media (max-width: 1200px) {
+           margin: 0 auto;
+        }
+
+        @media (max-width: 650px) {
+             display: block;
+        }
+
+    }
+
+    &__column {
+        &_1 {
+            flex: 0 0 251px;
+        }
+        &_2 {
+            flex: 1 1 auto;
+            padding-left: 48px;
+            display: flex;
+            flex-direction: column;
+
+
+            @media (max-width: $md4+px) {
+                padding-left: 0;
+            }
+        }
+    }
+    &__img {
+        width: 253px;
+        height: 361px;
+        margin-bottom: 63px;
+
+        @media (max-width: 650px) {
+            margin: 0 auto 63px;
+        }
+    }
+    &__title {
+        max-width: 270px;
+        @include maintext(34,700,44);
+        margin-bottom: 22px;
+        margin-top: -5px;
+    }
+    &__subtitle {
+        @include text(13,400,20);
+        margin-bottom: 17px;
+        max-width: 325px;
+    }
+    &__list {
+         margin-bottom: 56px;
+        & > li {
+            position: relative;
+            @include text(13,400,20);
+            margin-bottom: 10px;
+            padding-left: 27px;
+
+            &:before {
+                position: absolute;
+                content: url('../img/services/smallCheck.svg');
+                top: 50%;
+                left: 5px;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    &__btn {
+        flex: 1 1 auto;
+        display: flex;
+        align-items: flex-end;
+    }
+}
+
+
+
+.bottom-services-information {
+    &__wrap {
+        position: relative;
+        height: 0;
+        width: 100%;
+        padding-bottom: 45%;
+
+        @media (max-width: $md4+px) {
+          text-align: center;
+          padding-bottom: 0;
+          height: auto;  
+        }
+    }
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+
+        @media (max-width: $md4+px) {
+          position: relative;
+          height: 0;
+          padding-bottom: 45%;
+           
+        }
+    }
+    &__title {
+        display: inline-block;
+        position: absolute;
+        background: #fff;
+        box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+        opacity: 0.96;
+        padding: 23px 43px 21px 33px;
+        color: $textColor;
+        @include maintext(40,700,50);
+        text-transform: uppercase;
+        right: 70px;
+        bottom: -35px;
+
+        @media (max-width: $md4+px) {
+           position: static;
+           transform: translateY(-30px);
+           font-size: 30px;
+           line-height: 40px;
+        }
+    }
+}
+
+
+
+.difference-services-information {
+    max-width: 550px;
+
+    @media (max-width: 1200px) {
+        margin: 40px auto 0;
+    }
+
+    @media (max-width: $md4+px) {
+       margin-top: 0;
+    }
+
+    &__title {
+        padding-left: 130px;
+        @include maintext(30,700,40);
+        color: $textColor;
+        margin-bottom: 29px;
+        & > span {
+            color: #e9933e;
+        }
+
+        @media (max-width: 650px) {
+           padding-left: 75px;
+        }
+
+        @media (max-width: $md4+px) {
+           padding-left: 0;
+           text-align: center;
+           margin-bottom: 20px;
+        }
+    }
+    &__list {
+        & > li {
+                display: flex;
+            &:not(:last-child) {
+                 margin-bottom: 48px;
+
+            }
+        }
+    }
+    &__icon {
+        flex: 0 0 85px;
+        margin-right: 45px;
+        display: flex;
+        justify-content: center;
+
+        @media (max-width: 650px) {
+            flex: 0 0 50px;
+            margin-right: 25px;
+
+            & img {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: $md4+px) {
+           margin-right: 10px;
+           flex: 0 0 35px;
+        }
+    }
+    &__text-wrap {
+        flex: 1 1 auto;
+    }
+    &__subtitle {
+        @include maintext(20,700,20);
+        color: $textColor;
+        margin-bottom: 8px;
+
+        @media (max-width: $md4+px) {
+           font-size: 18px;
+           line-height: 18px;
+        }
+    }
+    &__text {
+        @include text(16,400,26);
+        color: #404549;
+
+        @media (max-width: $md4+px) {
+           font-size: 14px;
+           line-height: 22px;
+        }
+    }
+}
+
+// ==== AND SERVICES INFORMATION =====================================================
+
+
+
+// ==== SERVICES ACTION =====================================================
+.services-action {
+    padding: 85px 0 50px;
+
+    @media (max-width: $md4+px) {
+        padding: 50px 0 35px;
+    }
+    &__body {
+        background-color: #edf0f2;
+        display: flex;
+
+        @media (max-width: $md2+px) {
+            display: block;
+        }
+    }
+    &__column {
+        display: flex;
+        flex-direction: column;
+
+
+        @media (max-width: $md2+px) {
+            align-items: center;
+            padding: 35px 15px;
+            text-align: center;
+        }
+
+        &_1 {
+            flex: 0 1 570 / 1235 * 100%;
+            border-right: 1px solid #e3e7ea;
+            padding: 42px 15px 47px 79px;
+
+            @media (max-width: $md2+px) {
+              border-right: none;
+            }
+        }
+        &_2 {
+            flex: 0 1 665 / 1235 * 100%;
+            padding-left: 110px;
+            padding-right: 15px;
+            padding: 42px 15px 47px 110px;
+        }
+    }
+    &__title {
+        color: $textColor;
+        @include maintext(40,700,50);
+        margin-bottom: 10px;
+        max-width: 340px;
+
+        @media (max-width: $md4+px) {
+           font-size: 32px;
+           line-height: 40px;
+        }
+    }
+    &__text {
+        @include text(16,400,26);
+        color: #404549;
+        margin-bottom: 12px;
+        max-width: 415px;
+        flex: 1 1 auto;
+    }
+    &__link-btn {
+
+        & > a {
+            @media (max-width: $md4+px) {
+               font-size: 16px;
+               min-width: 272px;
+            }
+        }
+    }
+}
+
+// ==== AND SERVICES ACTION =====================================================
+
+
+
+// ==== SERVICES IMG =====================================================
+.services-img {
+    padding: 35px 0 84px;
+
+    @media (max-width: $md4+px) {
+       padding: 15px 0 50px;
+    }
+
+    &__body {}
+    &__wrap {
+        max-width: 450px;
+        margin: 0 auto;
+        & img {
+            width: 100%;
+        }
+    }
+}
+
+// ==== AND SERVICES IMG =====================================================
