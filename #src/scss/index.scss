@@ -1,0 +1,645 @@
+// ==== MAIN BANNER =====================================================
+.home-banner {
+	min-height: 987px;
+	position: relative;
+
+	&__body {
+		padding: 1px 15px;
+	}
+
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		height: 665px;
+
+		&:before {
+			position: absolute;
+			content: '';
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(#000, 0.08);
+			z-index: 1;
+		}
+	}
+	&__top {
+		margin-top: 135px;
+		text-transform: uppercase;
+		margin-bottom: 42px;
+	}
+	&__bottom {}
+}
+
+
+
+.top-home-banner {
+	max-width: 739px;
+	color: #fff;
+
+	@media (max-width: $md3+px ) {
+		text-align: center;
+	}
+
+	&__suptitle {
+		@include maintext(40,500,50);
+		margin-bottom: 4px;
+
+		@media (max-width: $md4+px ) {
+			font-size: 26px;
+		}
+	}
+	&__title {
+		@include maintext(70,700,60);
+		margin-bottom: 28px;
+
+		@media (max-width: $md3+px ) {
+			font-size: 52px;
+			line-height: 50px;
+		}
+
+		@media (max-width: $md4+px ) {
+			font-size: 35px;
+			line-height: 40px;
+		}
+	}
+	&__btn {
+
+		@media (max-width: $md4+px ) {
+			width: 100%;
+		}
+
+		&.btn {
+			& > a {
+				@include maintext(34,700,34);
+				min-height: 86px;
+				min-width: 390px;
+				padding:20px 38px;
+
+				@media (max-width: $md4+px ) {
+					min-width: auto;
+					width: 100%;
+					font-size: 22px;
+					min-height: 66px;
+				}
+
+				& span {
+					height: 35px;
+					width: 35px;
+
+					@media (max-width: $md4+px ) {
+						height: 25px;
+						width: 25px;
+					}
+
+					&:before {
+						height: 5px;
+
+						@media (max-width: $md4+px ) {
+							height: 3px;
+						}
+					}
+					&:after {
+						width: 5px;
+
+						@media (max-width: $md4+px ) {
+							width: 3px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+.bottom-home-banner {
+	display: flex;
+	align-items: center;
+	padding: 1px 0;
+
+	@media (max-width: 1250px ) {
+		display: block;
+		text-align: center;
+	}
+
+	&__item {
+		background: #fff;
+		box-shadow: 0 3px 40px rgba(0, 0, 0, 0.08);
+
+		@media (max-width: $md3+px ) {
+			padding: 60px 15px 40px;
+		}
+
+		&_1 {
+			margin: 35px 0;
+			min-height: 421px;
+			flex:0 1 400 / 1235 * 100%;
+			padding: 61px 30px 30px 45px;
+		}
+		&_2 {
+			height: 495px;
+			flex:0 1 432 / 1235 * 100%;
+			color: #fff !important;
+			padding: 98px 65px 40px;
+			background-image: linear-gradient(180deg, #f4bb44 0%, #e9933e 100%);
+
+			& .bottom-home-banner__title, .bottom-home-banner__subtitle, .bottom-home-banner__text {
+				color: #fff;
+			}
+		}
+		&_3 {
+			margin: 35px 0;
+			min-height: 421px;
+			flex:0 1 400 / 1235 * 100%;
+			padding: 63px 30px 30px 45px;
+		}
+	}
+
+	&__title {
+		@include maintext(70,900,60);
+		color: $textColor;
+		text-transform: uppercase;
+
+		@media (max-width: $md4+px ) {
+			font-size: 50px;
+		}
+	}
+	&__subtitle {
+		@include maintext(40,500,40);
+		color: #8c9297;
+		margin-bottom: 31px;
+
+		@media (max-width: $md4+px ) {
+			font-size: 29px;
+			line-height: 35px;
+		}
+	}
+	&__text {
+		@include text(13,400,20);
+		max-width: 300px;
+		color: #8c9297;
+		margin-bottom: 29px;
+
+		@media (max-width: 1250px ) {
+			margin: 0 auto 29px;
+		}
+	}
+	&__icon {
+		text-align: center;
+	}
+}
+
+// ==== AND MAIN BANNER =====================================================
+
+
+
+
+
+
+
+
+// ==== WHAT MAKES =====================================================
+.what-makes {
+	padding: 123px 0 114px;
+
+	@media (max-width: $md4+px ) {
+		padding: 35px 0 50px;
+	}
+
+	&__body {
+		display: flex;
+
+		@media (max-width: $md2+px ) {
+			display: block;
+		}
+	}
+	&__column {
+		flex: 0 1 50%;
+		&_1 {}
+		&_2 {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	&__card {
+		background: #fff;
+		box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+		opacity: 0.96;
+		color: $textColor;
+		padding: 69px 70px 68px 98px;
+		max-width: 606px;
+
+		@media (max-width: $md2+px ) {
+			margin: 0 auto;
+		}
+
+		@media (max-width: $md3+px ) {
+			padding: 49px 40px 48px 48px;
+		}
+
+		@media (max-width: $md4+px ) {
+			padding: 39px 15px 38px;
+		}
+	}
+	&__title {
+		@include maintext(50,700,50);
+		margin-bottom: 32px;
+
+		@media (max-width: $md4+px ) {
+			font-size: 36px;
+			line-height: 36px;
+		}
+	}
+	&__text {
+		@include maintext(26,300,36);
+		margin-bottom: 26px;
+
+		@media (max-width: $md4+px ) {
+			font-size: 22px;
+			line-height: 32px;
+		}
+	}
+	&__smalltext {
+		@include text(16,400,26);
+		max-width: 420px;
+
+		@media (max-width: $md4+px ) {
+			font-size: 14px;
+			line-height: 24px;
+		}
+	}
+	&__logo-box {}
+}
+
+.logo-box {
+	width: 100%;
+	max-width: 480px;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0px 0 91px 22px;
+
+	@media (max-width: $md2+px ) {
+		margin-top: 30px;
+		padding-left: 0;
+		padding-bottom: 0;
+	}
+
+	&__column {
+		padding: 20px;
+
+		& img {
+			width: 100%;
+		}
+		&_1 {
+			flex: 0 1 100%;
+			margin-bottom: 24px;
+		}
+		&_2 {
+			flex: 0 1 46.5%;
+			padding-top: 0;
+		}
+		&_3 {
+			flex: 0 1 53.5%;
+		}
+	}
+}
+
+// ==== AND WHAT MAKES =====================================================
+
+
+
+
+// ==== OUR LOANS =====================================================
+.our-loans {
+	background-color: #edf0f2;
+	padding: 92px 0 110px;
+
+	@media (max-width: $md4+px ) {
+			padding: 50px 0 50px;
+	}
+	&__body {}
+
+	&__title {
+		@include maintext(40,700,40);
+		color: $textColor;
+		margin-bottom: 110px;
+		text-align: center;
+
+		@media (max-width: $md3+px ) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-bottom: 50px;
+		}
+
+		@media (max-width: $md4+px ) {
+			margin-bottom: 30px;
+		}
+
+		& > span {
+
+			&:first-child {
+				color: #e9933e;
+				border-bottom: 4px solid #e9933e;
+				padding-bottom: 5px;
+
+				@media (max-width: $md3+px ) {
+					margin-bottom: 20px;
+				}
+			}
+		}
+
+		& .hr {
+			height: 14px;
+			width: 1px;
+			background: #8c9297;
+			margin: auto 20px;
+			display: inline-block;
+			border-bottom: none;
+
+			@media (max-width: $md3+px ) {
+				display: none;
+			}
+		}
+	}
+
+	&__list {
+		display: flex;
+		margin: 0 -14.5px;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		& > li {
+			padding: 0 14.5px;
+			flex: 0 1 20%;
+			margin-bottom: 22px;
+
+		}
+	}
+	&__card {}
+}
+.card-our-loans {
+	background: #fff;
+	border-radius: 5px;
+	min-height: 238px;
+	min-width: 223px;
+	padding: 20px 15px;
+	display: flex;
+	align-items: center;
+	color: $textColor;
+	text-transform: uppercase;
+	text-align: center;
+	flex-direction: column;
+
+	&__icon {
+		margin-bottom: 24px;
+		height: 102px;
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+	}
+	&__title {
+		@include maintext(20,900,20);
+	}
+	&__subtitle {
+		@include maintext(20,500,20);
+	}
+}
+
+// ==== AND OUR LOANS =====================================================
+
+
+
+
+
+
+
+
+
+
+
+// ==== WHY USE SERVECES =====================================================
+.why-use-services {
+	background-color: #f8f8f8;
+	padding: 114px 0 0;
+
+	@media (max-width: $md4+px ) {
+		padding: 50px 0 0;
+	}
+
+	&__body {}
+
+	&__top {
+		display: flex;
+
+		@media (max-width: $md2+px ) {
+			display: block;
+		}
+	}
+
+	&__column {
+		
+		&_1 {
+			flex: 0 1 47%;
+
+			@media (max-width: $md2+px ) {
+				margin-bottom: 60px;
+			}
+		}
+		&_2 {
+			flex: 0 1 53%;
+		}
+	}
+	&__text-block {
+		max-width: 545px;
+		padding-top: 15px;
+		padding-right: 20px;
+		color: $textColor;
+
+		@media (max-width: $md2+px ) {
+			padding-right: 0;
+			margin: 0 auto;
+		}
+	}
+	&__title {
+		@include maintext(40,700,50);
+		margin-bottom: 42px;
+
+		@media (max-width: $md4+px ) {
+			font-size: 36px;
+			line-height: 36px;
+			margin-bottom: 20px;
+		}
+	}
+	&__text {
+		@include text(24,400,34);
+		margin-bottom: 80px;
+
+		@media (max-width: $md4+px ) {
+			font-size: 22px;
+			line-height: 32px;
+			margin-bottom: 45px;
+		}
+
+		& p {
+			margin: 12px 0;
+		}
+	}
+	&__link {
+
+		& > a {
+			@include maintext(26,700,26);
+			display: flex;
+			align-items: center;
+			color: #78a752;
+
+			& > span {
+				margin-left: 12px;
+				height: 28px;
+				width: 28px;
+
+				&:before, &:after {
+					background: #78a752;
+				}
+
+				&:before {
+					height: 4px;
+				}
+				&:after {
+					width: 4px;
+				}
+			}
+		}
+	}
+	&__cards-block {
+		position: relative;
+		min-height: 709px;
+		width: 588px;
+
+		@media (max-width: $md2+px ) {
+			margin: 0 auto;
+		}
+
+		@media (max-width: 675px ) {
+			width: 100%;
+		}
+	}
+	&__bottom {
+		margin-top: 33px;
+
+		@media (max-width: $md2+px ) {
+			margin-top: 60px;
+		}
+	}
+	&__img {
+		height: 0;
+		width: 100%;
+		padding-bottom: 62%;
+
+		& > img {
+			object-fit: unset;
+		}
+	}
+}
+
+.why-use-services-card {
+	position: absolute;
+	background: #fff;
+	box-shadow: 0 15px 42px rgba(0, 0, 0, 0.08);
+	width: 302px;
+	border-radius: 10px;
+	min-height: 309px;
+
+	@media (max-width: 675px ) {
+		position: static;
+		margin: 0 auto 20px;
+	}
+
+	&_1 {
+		top: 0;
+		left: 35px;
+		padding: 46px 55px 20px 53px;
+	}
+	&_2 {
+		padding: 50px 52px 20px 45px;
+		background-image: linear-gradient(138deg, #f4bb44 0%, #e9933e 100%);
+		min-height: 370px;
+		top: 116px;
+		right: 0;
+		z-index: 3;
+
+		& .why-use-services-card__title, .why-use-services-card__text {
+			color: #fff;
+		}
+
+		& .why-use-services-card__text {
+			margin-bottom: 5px;
+		}	
+	}
+	&_3 {
+		bottom: 0;
+		left: 12px;
+		padding: 34px 52px 20px 52px;
+
+		& .why-use-services-card__icon {
+			text-align: center;
+			margin-bottom: 15px;
+		}
+	}
+	&__icon {
+		text-align: right;
+		&_bottom {
+			text-align: center;
+		}
+	}
+	&__title {
+		@include maintext(52,700,45);
+		color: $textColor;
+		margin-bottom: 5px;
+	}
+	&__text {
+		@include text(13,400,20);
+		max-width: 211px;
+	}
+}
+
+
+// ==== AND WHY USE SERVECES =====================================================
+
+
+
+
+// ==== HELPFUL RESOURCES =====================================================
+.helpful-resources {
+	padding: 119px 0 54px;
+
+	@media (max-width: $md4+px ) {
+		padding: 50px 0 30px;
+	}
+
+	&__body {}
+	&__title {
+		text-align: center;
+		@include maintext(40,700,50);
+		margin-bottom: 55px;
+		color: #53575a;
+
+		@media (max-width: $md4+px ) {
+			font-size: 36px;
+			line-height: 36px;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+
+// ==== AND HELPFUL RESOURCES =====================================================

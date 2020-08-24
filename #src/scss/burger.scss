@@ -1,0 +1,63 @@
+.burger-wrap {
+	margin-left: 25px;
+	display: inline-block;
+	background-color: transparent;
+
+	& .burger {
+		width: 45px;
+		height: 35px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		position: relative;
+		cursor: pointer;
+	}
+
+	& .burger span {
+		width: 22px;
+		height: 5px;
+		display: block;
+		background: #e9933e;
+		position: absolute;
+		transition: all 0.2s;
+	}
+
+	& .burger span:nth-child(1) {
+		top:5px;
+		left: 5px;
+		width: 36px;
+	}
+
+	& .burger span:nth-child(2) {
+		left: 5px;
+	}
+
+	& .burger span:nth-child(3) {
+		left: 5px;
+	}
+
+	& .burger span:nth-child(4) {
+		bottom:5px;
+		width: 29px;
+		left: 5px;
+	}
+
+	.second {
+		transform: rotate(45deg);
+		width: 36px !important;
+	}
+
+	.third {
+		transform: rotate(-45deg);
+		width: 36px !important;
+	}
+
+	.first {
+		transform:  scale(0) !important;
+	}
+
+	.fourth {
+			transform: scale(0) !important;
+	}
+}

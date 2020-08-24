@@ -1,0 +1,25 @@
+// === Burger Handler =====================================================================
+	function burgerBtnAnimation(e) {
+		$('.burger span:nth-child(1)').toggleClass('first');
+		$('.burger span:nth-child(2)').toggleClass('second');
+		$('.burger span:nth-child(3)').toggleClass('third');
+		$('.burger span:nth-child(4)').toggleClass('fourth');
+		let classNameElem = document.querySelector('.burger').dataset.activel;
+		document.querySelector(`.${classNameElem}`).classList.toggle('open');
+		$('.' + classNameElem +'').slideToggle(300);
+	}
+	$('.burger').click((e) => burgerBtnAnimation(e));
+
+	{
+		if($('.blog-burger').length>0) {
+			$('.blog-burger').click(function() {
+				$('.blog-burger span:nth-child(1)').toggleClass('first');
+				$('.blog-burger span:nth-child(2)').toggleClass('second');
+				$('.blog-burger span:nth-child(3)').toggleClass('third');
+				$('.blog-burger span:nth-child(4)').toggleClass('fourth');
+
+				$('.top-blog-list__menu-wrap').slideToggle(300);
+			});
+		}
+	}
+// === Burger Handler =====================================================================	
