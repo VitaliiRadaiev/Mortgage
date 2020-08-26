@@ -1,0 +1,395 @@
+// ==== AND PROCESS =====================================================
+.calculator {
+	
+	&.services-banner {
+		margin-bottom: 17px;
+	}
+	& .services-banner__card {
+		padding: 59px 69px 79px 80px;
+
+		@media (max-width: $md2+px) {
+		    text-align: left;
+		}
+
+		@media (max-width: $md3+px) {
+		    text-align: center;
+		    padding: 36px 40px 34px 47px;
+		}
+
+		@media (max-width: $md3+px) {
+		    padding: 36px 15px 34px;
+		}
+	}
+	& .services-banner__title {
+		& > p {
+			&:last-child {
+				color: #e9933e;
+			}
+		}
+	}
+}
+// ==== AND PROCESS =====================================================
+
+
+
+// ==== calculator-block-text-right =====================================================
+.calculator-block-text-right {
+	padding: 0 0 111px;
+
+	&__body {
+		display: flex;
+
+		@media (max-width: 1100px) {
+			flex-direction: column;
+		}
+	}
+	&__column {
+		&_1 {
+			flex: 0 0 606px;
+
+			@media (max-width: 1100px) {
+				flex: 0 1 100%;
+				order: 1;
+			}
+		}
+		&_2 {
+			flex: 1 1 auto;
+			display: flex;
+			justify-content: flex-end;
+			padding-left: 20px;
+
+			@media (max-width: 1100px) {
+				padding-left: 0;
+			}
+		}
+	}
+	&__img {
+		min-height: 663px;
+		width: 100%;
+
+		@media (max-width: 1100px) {
+			min-height: 0;
+			height: 0;
+			padding-bottom: 55%;
+		}
+	}
+	&__text-wrap {
+		max-width: 504px;
+		padding-top: 101px;
+		padding-bottom: 20px;
+
+		@media (max-width: 1100px) {
+			max-width: none;
+		}
+
+		@media (max-width: $md2+px) {
+			padding-top: 30px;
+		}
+	}
+	&__title {
+		@include maintext(30,700,40);
+		color: $textColor;
+		margin-bottom: 40px;
+
+		@media (max-width: $md4+px) {
+			margin-bottom: 20px;
+		}
+	}
+	&__text {
+		@include text(24,400,34);
+		color: #404549;
+
+		@media (max-width: $md4+px) {
+			font-size: 20px;
+			line-height: 30px;
+		}
+
+		& > p {
+			margin: 20px 0;
+		}
+	}
+}
+// ==== AND calculator-block-text-right =====================================================
+
+
+
+// ==== CALCULATOR CARDS =====================================================
+.calculator-cards {
+	position: relative;
+	padding:119px 0 89px;
+	background-color: #edf0f2;
+
+
+	@media (max-width: $md4+px) {
+		padding: 70px 0 70px;
+	}
+
+	&__arrow-down {
+		position: absolute;
+		bottom: 47px;
+		left: 50%;
+		transform: translateX(-50%);
+
+		@media (max-width: $md4+px) {
+			bottom: 40px;
+		}
+	}
+
+	&__body {
+
+	}
+
+	&__wrap {
+		display: flex;
+		margin: 0 -15px;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	&__item {
+		padding: 0 15px;
+		margin-bottom: 30px;
+		position: relative;
+
+		&:not(:last-child) {
+			&:before {
+				position: absolute;
+				content: '';
+				width: 58px;
+				height: 9px;
+				background-color: #e9933e;
+				top: 50%;
+				right: 0;
+				transform: translate(50%, -50%);
+				z-index: 2;
+
+				@media (max-width: 1280px) {
+					display: none;
+				}
+			}
+		}
+	}
+
+	&__inner {
+		width: 286px;
+		min-height: 321px;
+		box-shadow: 0 3px 20px rgba(119, 128, 134, 0.08);
+		background-color: #ffffff;
+		text-align: center;
+		padding: 20px 20px 10px 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	&__icon {
+		margin-bottom: 25px;
+	}
+	&__title {
+		color: $textColor;
+		@include maintext(20,700,20);
+		text-transform: uppercase;
+		margin-bottom: 11px;
+	}
+	&__subtitle {
+		color: #778086;
+		@include text(13,400,20);
+	}
+}
+// ==== AND CALCULATOR CARDS =====================================================
+
+
+
+
+// ==== CALCULATOR APP =====================================================
+.calculator-app {
+	padding: 53px 0 0 0;
+
+	&__body {}
+
+	&__title {
+		text-align: center;
+		@include maintext(30,700,40);
+		color: $textColor;
+		margin-bottom: 27px;
+	}
+	&__img {
+		margin: 0 auto;
+		max-width: 879px;
+
+		& > img {
+			width: 100%;
+		}
+	}
+}
+// ==== AND CALCULATOR APP =====================================================
+
+
+
+
+// ==== ENQUIRE ONLINE =====================================================
+.calculator {
+	&.enquire-online .container {
+		max-width: 1265px;
+	}
+
+	& .enquire-online__body {
+		padding: 74px 0 90px;
+	}
+
+	& .enquire-online__img {
+		left: 17px;
+
+		@media (max-width: 1200px) {
+			display: none;
+		}
+	}
+
+	& .enquire-online__inner {
+		margin-right: 84px;
+		max-width: 547px;
+
+		@media (max-width: 1200px) {
+			margin: 0 auto;
+		}
+	}
+
+	& .enquire-online__title {
+		margin-bottom: 21px;
+		& > p {
+			&:nth-child(2) {
+				color: #e9933e;
+			}
+
+			&:last-child {
+				color: #404549;
+			}
+		}
+	}
+
+	& .enquire-online__subtitle {
+		max-width: 511px;
+	}
+}
+// ==== AND ENQUIRE ONLINE =====================================================
+
+
+
+// ==== CALCULATOR FAQ =====================================================
+.calculator-faq {
+	padding: 62px 0 71px;
+
+	&__body {}
+
+	&__title {
+		color: $textColor;
+		@include maintext(40,700,50);
+		margin-bottom: 14px;
+		text-align: center;
+
+		@media (max-width: $md4+px) {
+			font-size: 30px;
+			line-height: 40px;
+		}
+	}
+
+	&__subtitle {
+		@include text(24,400,34);
+		color: #404549;
+		margin-bottom: 65px;
+		text-align: center;
+
+		@media (max-width: $md4+px) {
+			font-size: 20px;
+			line-height: 28px;
+			margin-bottom: 35px;
+		}
+	}
+
+	&__list {
+
+		& > li {
+
+			&:not(:last-child) {
+				margin-bottom: 31px;
+				border-bottom: 1px solid #edf0f2;
+			}
+		}
+	}
+}
+
+
+.list-calculator-faq {
+	&__title {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		padding-left: 25px;
+		@include maintext(20,700,20);
+		text-transform: uppercase;
+		margin-bottom: 30px;
+		cursor: pointer;
+		color: $textColor;
+
+		&:before {
+			position: absolute;
+			content: '';
+			left: 0;
+			top: 5px;
+			height: 7px;
+			width: 7px;
+			background: $textColor;
+			border-radius: 50%;
+		}
+
+		& .accordion__plus {
+			margin-left: 25px;
+
+			@media (max-width: $md4+px) {
+				margin-left: 15px;
+			}
+		}
+
+		&.active {
+			//color: #e9933e;
+
+			& .plus-accordion__body {
+				&:before {
+					height: 0;
+				}
+				/*&:after {
+					background: #e9933e;
+				}*/
+			}
+		}
+
+		@media (max-width: $md4+px) {
+			font-size: 16px;
+			line-height: 18px;
+			margin-bottom: 20px;
+		}
+	}
+	&__text-collapse {
+		@include text(16,400,26);
+		color: #404549;
+		max-width: 972px;
+		padding-left: 24px;
+		display: none;
+		margin-top: -2px;
+
+		@media (max-width: $md4+px) {
+			font-size: 14px;
+			line-height: 24px;
+		}
+
+		& > p {
+			margin: 0px 0 26px;
+
+			@media (max-width: $md4+px) {
+				margin: 0px 0 20px;
+			}
+		}
+	}
+}
+
+
+// ==== AND CALCULATOR FAQ =====================================================

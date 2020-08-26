@@ -6,6 +6,11 @@
 		$('.burger span:nth-child(4)').toggleClass('fourth');
 		let classNameElem = document.querySelector('.burger').dataset.activel;
 		document.querySelector(`.${classNameElem}`).classList.toggle('open');
+
+		let applyHead = document.querySelector('.apply-now-head');
+		if(applyHead) {
+			applyHead.classList.toggle('open');
+		}
 		$('.' + classNameElem +'').slideToggle(300);
 	}
 	$('.burger').click((e) => burgerBtnAnimation(e));

@@ -1,0 +1,348 @@
+// ==== CONTACT BANNER =====================================================
+.contact-banner {
+	min-height: 943px;
+	position: relative;
+	display: flex;
+
+	@media (max-width: 1200px) {
+		display: block;
+		min-height: auto;
+	}
+
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		min-height: 665px;
+
+		@media (max-width: 1200px) {
+			position: relative;
+		}
+
+		@media (max-width: $md2+px) {
+			min-height: 465px;
+		}
+
+		@media (max-width: $md4+px) {
+			min-height: 365px;
+		}
+	}
+
+	&__body {
+		height: 100%;
+		display: flex;
+		align-self: flex-end;
+		flex: 1 1 auto;
+
+		@media (max-width: 1200px) {
+			height: auto;
+			transform: translateY(-50px);
+		}
+	}
+	&__inner {
+		display: flex;
+		margin: 0 -8.5px;
+		width: 100%;
+
+		@media (max-width: 1200px) {
+			display: block;
+			margin: 0;
+		}
+	}
+	&__card {
+		padding: 0 8.5px;
+		flex: 0 1 50%;
+
+		@media (max-width: 1200px) {
+			padding: 0;
+
+			&:not(:last-child) {
+				margin-bottom: 40px;
+
+				@media (max-width: $md4+px) {
+					margin-bottom: 15px;
+				}
+			}
+		}
+	}
+}
+.card-contact-banner {
+	min-height: 425px;
+
+	@media (max-width: 1200px) {
+		min-height: auto;
+	}
+
+	&__inner {
+		box-shadow: 0 10px 50px rgba(0, 0, 0, 0.06);
+		background-color: #ffffff;
+		opacity: 0.96;
+		padding: 78px 25px 33px 80px;
+		height: 100%;
+
+		@media (max-width: 1200px) {
+			max-width: 650px;
+			margin: 0 auto;
+			padding: 80px 40px 80px 80px;
+		}
+
+		@media (max-width: $md3+px) {
+			padding: 60px 20px 60px 40px;
+		}
+
+		@media (max-width: $md4+px) {
+			padding: 40px 15px;
+		}
+	}
+
+	&__title {
+		@include maintext(70,700,60);
+		font-family: "GTWalsheimPro-Bold";
+		text-transform: uppercase;
+		color: $textColor;
+		margin-bottom: 27px;
+
+		@media (max-width: $md3+px) {
+			font-size: 50px;
+			line-height: 44px;
+		}
+
+		@media (max-width: $md4+px) {
+			font-size: 38px;
+			line-height: 38px;
+			margin-bottom: 6px;
+		}
+
+		& > p {
+			&:last-child {
+				color: #e9933e;
+			}
+		}
+	}
+	&__text-wrap {
+		display: flex;
+		align-items: center;
+	}
+	&__icon {
+		flex: 0 0 auto;
+		margin-right: 25px;
+
+		@media (max-width: $md3+px) {
+			flex: 0 0 70px;
+			margin-right: 20px;
+			& > img {
+				width: 100%;
+			}
+		}
+
+		@media (max-width: $md4+px) {
+			display: none;
+		}
+	}
+	&__text {
+		flex: 1 1 auto;
+		@include text(24,400,34);
+		color: $textColor;
+		max-width: 370px;
+
+		@media (max-width: $md3+px) {
+			font-size: 20px;
+			line-height: 30px;
+		}
+
+		@media (max-width: $md4+px) {
+			font-size: 18px;
+			line-height: 28px;
+		}
+	}
+}
+
+// ==== AND CONTACT BANNER =====================================================
+
+
+
+// ==== QUICK CONTACT =====================================================
+.quick-contact {
+	padding: 112px 0 70px;
+
+	@media (max-width: $md2+px) {
+		padding: 30px 0 70px;
+	}
+
+	&__body {
+		display: flex;
+
+		@media (max-width: $md2+px) {
+			display: block;
+		}
+	}
+
+	&__column {
+
+		&_1 {
+			flex: 0 0 597 / 1235 * 100%;
+			display: flex;
+			justify-content: center;
+			padding: 0 20px;
+
+			@media (max-width: $md2+px) {
+				padding: 0;
+				margin-bottom: 30px;
+			}
+		}
+		&_2 {
+			flex: 1 1 auto;
+		}
+	}
+
+	&__text-wrap {
+		max-width: 401px;
+	}
+	&__title {
+		@include maintext(40,700,50);
+		margin-bottom: 23px;
+		color: $textColor;
+
+		@media (max-width: $md4+px) {
+			font-size: 36px;
+			line-height: 40px;
+			margin-bottom: 10px;
+		}
+	}
+	&__text {
+		@include text(24,400,34);
+		color: #404549;
+
+		@media (max-width: $md4+px) {
+			font-size: 20px;
+			line-height: 30px;
+		}
+	}
+	&__form-wrap {}
+
+	&__form {
+		&.from-navigation {
+			padding: 11px 0 0;
+		}
+	}
+}
+
+// ==== AND QUICK CONTACT =====================================================
+
+
+
+
+// ==== CONTACT INFO =====================================================
+.contact-info {
+	min-height: 193px;
+	background-color: #53575a;
+	padding: 20px 0;
+	display: flex;
+	align-items: center;
+
+	&__body {
+		display: flex;
+
+		@media (max-width: 1200px) {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+	&__column {
+		@media (max-width: 1200px) {
+			& .contact-info__wrap {
+				margin: 0 auto;
+			}
+		}
+
+		&_1 {
+			flex: 0 1 312 / 1235 * 100%;
+			padding-right: 20px;
+
+			& .contact-info__wrap {
+				max-width: 246px;
+			}
+
+			@media (max-width: 1200px) {
+				flex: 0 1 50%;
+			}
+
+			@media (max-width: $md4+px) {
+				padding-right: 0;
+			}
+		}
+		&_2 {
+			flex: 0 1 312 / 1235 * 100%;
+			padding-right: 20px;
+
+			& .contact-info__wrap {
+				max-width: 246px;
+			}
+
+			@media (max-width: 1200px) {
+				flex: 0 1 50%;
+			}
+			@media (max-width: $md4+px) {
+				padding-right: 0;
+			}
+		}
+		&_3 {
+			flex: 0 1 611 / 1235 * 100%;
+			padding-right: 20px;
+
+			& .contact-info__wrap {
+				max-width: 503px;
+			}
+
+			@media (max-width: 1200px) {
+				flex: 0 1 100%;
+				padding-right: 0;
+				margin-top: 20px;
+
+				& .contact-info__title {
+					text-align: center;
+				}
+			}
+		}
+	}
+	&__title {
+		color: #fff;
+		@include text(26,400,36);
+
+		@media (max-width: $md4+px) {
+			text-align: center;
+		}
+	}
+	&__phone {
+		& > a {
+			@include maintext(40,700,60);
+			color: #e9933e;
+			white-space: nowrap;
+		}
+	}
+	&__email {
+		& > a {
+			color: #e9933e;
+			@include text(30,400,60);
+		}
+
+		@media (max-width: $md3+px) {
+			text-align: center;
+
+			& > a {
+				font-size: 25px;
+				line-height: 40px;
+			}
+		}
+
+		@media (max-width: $md4+px) {
+			& > a {
+				font-size: 17px;
+				line-height: 27px;
+			}
+		}
+	}
+}
+
+// ==== AND CONTACT INFO =====================================================

@@ -92,6 +92,7 @@ h6 {
 	width: 100%;
 	min-height: 100%;
 	overflow: hidden;
+	position: relative;
 	&.loaded {
 	}
 }
@@ -581,6 +582,7 @@ h6 {
 			}
 		}
 	}
+
 	&__title {
 		text-align: right;
 		max-width: 380px;
@@ -655,9 +657,86 @@ h6 {
 		}
 	}
 }
-.container {
-}
 
 // ==== AND  CONTACT US =====================================================
 
 
+
+// ======= ACCORDION ==================================================
+.accordion {
+	@media (max-width: $md3+px ) {
+		text-align: left;
+	}
+	&__item {
+		margin-bottom: 34px;
+	}
+	&__title {
+		cursor: pointer;
+		display: flex;
+		justify-content: space-between;
+		color: #404549;
+		@include text(16,700,20);
+		margin-bottom: 12px;
+
+		&.active {
+			color: #e9933e;
+
+			& .plus-accordion__body {
+				&:before {
+					height: 0;
+				}
+				&:after {
+					background: #e9933e;
+				}
+			}
+		}
+	}
+	&__plus {
+		height: 100%;
+		width: 30px;
+		margin-left: 15px;
+	}
+	&__collapse {
+		display: none;
+		color: #e9933e;
+		padding-right: 35px;
+		@include text(13,400,20);
+		margin-bottom: 38px;
+
+		@media (max-width: $md2+px ) {
+			padding-right: 50px;
+		}
+	}
+}
+
+.plus-accordion {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&__body {
+		height: 25px;
+		width: 25px;
+		position: relative;
+
+		&:before {
+			position: absolute;
+			content: '';
+			background-color: #edf0f2;
+			height: 100%;
+			width: 4px;
+			left: 50%;
+			transform: translateX(-50%);
+			transition: all .2s ease;
+		}
+		&:after {
+			position: absolute;
+			content: '';
+			background-color: #edf0f2;
+			width: 100%;
+			height: 4px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+}
+// ======= AND ACCORDION ==================================================

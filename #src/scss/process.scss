@@ -1,0 +1,307 @@
+.padding-200 {
+	padding-bottom: 200px;
+
+	@media (max-width: $md4+px) {
+		padding-bottom: 50px;
+	}
+}
+// ==== PROCESS SUBBANNER =====================================================
+.process-subbanner {
+	position: relative;
+	transform: translateY(-60px);
+	z-index: 3;
+	padding-bottom: 38px;
+	&__body {
+
+	}
+	&__wrap {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	&__item {
+		width: 247px;
+		min-height: 219px;
+		position: relative;
+		background: #fff;
+		box-shadow: 5px 7px 20px -1px rgba(0,0,0,.1);
+
+		&:not(:last-child) {
+			border-right: 1px solid #edf0f2;
+
+			& .process-subbanner__title {
+				&:after {
+					position: absolute;
+					content: '';
+					top: 50%;
+					right: 0;
+					height: 4px;
+					width: 34px;
+					transform: translate(50%, -50%);
+					background: #e9933e;
+					z-index: 2;
+
+					@media (max-width: 1280px) {
+						display: none;
+					}
+
+					@media (max-width: $md4+px) {
+						display: block;
+						right: 50%;
+						top: 100%;
+						transform: translate(50%, 50%) rotate(90deg);
+					}
+				}
+			}
+		}
+
+		&:before {
+			position: absolute;
+			content: '';
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			width: 100%;
+			height: 100%;
+			transition: all .2s ease;
+			background-color: #fff;
+			background-image: linear-gradient(180deg, #f4bb44 0%, #e9933e 100%);
+			opacity: 0;
+			z-index: 2;
+		}
+
+		&:after {
+			position: absolute;
+			content: '';
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			width: 100%;
+			height: 100%;
+			transition: all .2s ease;
+			background-color: #fff;
+			opacity: 0;
+			z-index: 1;
+		}
+
+		@media (min-width: 992px) {
+			&:hover {
+				&:before {
+					opacity: 1;
+					width: 110%;
+					height: 110%;
+				}
+
+				&:after {
+					opacity: 1;
+					width: 110%;
+					height: 110%;
+				}
+
+				& .process-subbanner__title {
+					color: #fff;
+					&:before {
+						opacity: 1;
+					}
+				}
+			}
+		}
+
+	}
+	&__title {
+		position: relative;
+		z-index: 5;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include maintext(20,700,20);
+		color: $textColor;
+		text-transform: uppercase;
+		padding: 20px;
+		flex-direction: column;
+		transition: all .2s ease;
+
+		&:before {
+			position: absolute;
+			content: url('../img/process/icon.svg');
+			left: 50%;
+			bottom: 0;
+			transform: translateX(-50%);
+			opacity: 0;
+			transition: all .2s ease;
+		}
+	}
+}
+// ==== AND PROCESS SUBBANNER =====================================================
+
+
+
+
+// ==== process-text-right-block =====================================================
+.process-text-right-block {
+	&_1 {
+		& .process-text-right-block__text-wrap {
+			padding-top: 0;
+		}
+	}
+
+	&__body {
+		display: flex;
+
+		@media (max-width: $md2+px) {
+			flex-direction: column;
+		}
+	}
+
+	&__column {
+		flex: 0 1 50%;
+		@media (max-width: $md2+px) {
+			flex: 0 1 100%;
+		}
+
+		&_1 {
+			@media (max-width: $md2+px) {
+				order: 1;
+			}
+		}
+		&_2 {
+			display: flex;
+			justify-content: flex-end;
+			padding-left: 20px;
+
+			@media (max-width: $md2+px) {
+				padding-left: 0;
+			}
+		}
+	}
+	&__img {
+		height: 100%;
+		width: 100%;
+		min-height: 663px;
+
+		@media (max-width: $md2+px) {
+			height: 0;
+			min-height: 0;
+			padding-bottom: 65%;
+		}
+	}
+	&__text-wrap {
+		max-width: 570px;
+		color: $textColor;
+		width: 100%;
+		padding: 53px 0 0px;
+
+		@media (max-width: $md2+px) {
+			max-width: none;
+		}
+	}
+	&__title {
+		@include maintext(30,700,40);
+		margin-bottom: 20px;
+
+		@media (max-width: $md4+px) {
+			font-size: 26px;
+			line-height: 36px;
+		}
+	}
+	&__text {
+		@include text(16,400,26);
+		max-width: 504px;
+		margin-bottom: 43px;
+
+		@media (max-width: $md4+px) {
+			font-size: 14px;
+			line-height: 24px;
+		}
+
+		@media (max-width: $md2+px) {
+			max-width: none;
+		}
+
+		& > p {
+			margin: 20px 0;
+		}
+	}
+}
+
+// ==== AND process-text-right-block =====================================================
+
+
+// ==== AND process-text-left-block =====================================================
+.process-text-left-block {
+	&__body {
+		display: flex;
+
+		@media (max-width: $md2+px) {
+			flex-direction: column;
+		}
+	}
+	&__column {
+		flex: 0 1 50%;
+
+		@media (max-width: $md2+px) {
+			flex: 0 1 100%;
+		}
+
+		&_1 {
+			padding-right: 20px;
+
+			@media (max-width: $md2+px) {
+				padding-right: 0;
+			}
+		}
+		&_2 {}
+	}
+	&__text-wrap {
+		max-width: 570px;
+		color: $textColor;
+		width: 100%;
+		padding: 53px 0 0px;
+
+		@media (max-width: $md2+px) {
+			max-width: none;
+		}
+	}
+	&__title {
+		@include maintext(30,700,40);
+		margin-bottom: 20px;
+	}
+	&__text {
+		@include text(16,400,26);
+		max-width: 520px;
+		margin-bottom: 43px;
+
+		@media (max-width: $md2+px) {
+			max-width: none;
+		}
+
+		& > p {
+			margin: 20px 0;
+		}
+	}
+
+	&__accordion {
+		max-width: 554px;
+
+		@media (max-width: $md2+px) {
+			max-width: none;
+		}
+	}
+
+	&__img {
+		height: 100%;
+		width: 100%;
+		min-height: 663px;
+
+		@media (max-width: $md2+px) {
+			height: 0;
+			min-height: 0;
+			padding-bottom: 65%;
+		}
+	}
+}
+// ==== AND process-text-left-block =====================================================
+
+

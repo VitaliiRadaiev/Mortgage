@@ -1,0 +1,161 @@
+// ==== APPLY NOW HEAD =====================================================
+.apply-now-head {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	transition: all .4s ease;
+
+	&.header {
+		background: transparent;
+	}
+
+	&.open {
+		&.header {
+			background: #fff;
+		}
+	}
+
+	& .submenu__column_1 {
+		flex: 0 1 100%;
+		justify-content: center;
+	}
+
+	& .submenu__column_2 {
+		display: none !important;
+	}
+
+	& .submenu__apply-btn {
+		display: none !important;
+	}
+}
+// ==== AND APPLY NOW HEAD =====================================================
+
+
+
+// ==== APPLY NOW =====================================================
+.apply-now {
+	background-color: #edf0f2;
+	position: relative;
+	padding: 204px 0 65px;
+
+	&:before {
+		position: absolute;
+		content: '';
+		top: -394px;
+		left: -499px;
+		background: #fff;
+		border-radius: 50%;
+		width: 1103px;
+		height: 1103px;
+
+		@media (max-width: $md2+px) {
+			width: 600px;
+			height: 600px;
+			top: -232px;
+			left: -264px;
+		}
+	}
+
+	&__body {
+		display: flex;
+
+		@media (max-width: $md3+px) {
+			flex-direction: column;
+		}
+	}
+	&__column {
+		&_1 {
+			flex: 0 0 540 / 1235 * 100%;
+			display: flex;
+			flex-direction: column;
+
+			@media (max-width: $md3+px) {
+				order: 1;
+				flex: 0 1 100%;
+			}
+		}
+		&_2 {
+			flex: 1 1 auto;
+			padding-left: 30px;
+			display: flex;
+			justify-content: flex-end;
+			position: relative;
+			z-index: 3;
+
+			@media (max-width: $md3+px) {
+				padding-left: 0;
+				justify-content: center;
+			}
+		}
+	}
+	&__title {
+		@include maintext(40,700,40);
+		color: $textColor;
+		text-transform: uppercase;
+		position: relative;
+		z-index: 3;
+
+		& > p {
+			&:first-child {
+				color: #e9933e;
+			}
+		}
+	}
+	&__img {
+		max-width: 443px;
+		align-self: flex-end;
+		margin-left: 91px;
+		transform: translateY(-23px);
+		position: relative;
+		z-index: 2;
+		& > img {
+			width: 100%;
+		}
+	}
+	&__link-btn {
+		& > a {
+			display: inline-block;
+			position: relative;
+			@include maintext(20,700,20);
+			text-transform: uppercase;
+			color: #e9933e;
+			padding: 12px 75px 10px 0px;
+
+			&:before {
+				position: absolute;
+				content: url('../img/aply-now/slmall-arrow-right.svg');
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%);
+
+			}
+		}
+	}
+	&__form-wrap {
+		@media (max-width: $md3+px) {
+			width: 100%;
+		}
+	}
+}
+
+// ==== AND APPLY NOW =====================================================
+
+
+
+// ==== APPLY FORM =====================================================
+.apply-now-form {
+
+	&.from-navigation {
+   		 padding: 0px 0 30px 20px;
+
+   		 @media (max-width: $md3+px) {
+   		 	padding-left: 0;
+   		 }
+	}
+
+	& .from-navigation__title {
+		display: block;
+	}
+}
+// ==== AND APPLY FORM =====================================================
