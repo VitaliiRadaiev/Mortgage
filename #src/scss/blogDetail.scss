@@ -125,7 +125,7 @@
 
 	&__card-info {
 		max-width: 352px;
-		margin: 0 auto 102px;
+		margin: 0 auto 99px;
 
 		@media (max-width: $md2+px) {
 			max-width: 552px;
@@ -152,8 +152,8 @@
 	&__text-wrap {
 		box-shadow: 0 16px 30px rgba(43, 43, 43, 0.08);
 		background-color: #ffffff;
-		padding: 48px 42px 41px 39px;
-		margin-bottom: 43px;
+		padding: 48px 42px 41px 46px;
+		margin-bottom: 29px;
 
 		@media (max-width: $md4+px) {
 			padding: 40px 25px;
@@ -170,7 +170,7 @@
 		color: #778086;
 
 		& p {
-			margin: 15px 0;
+			margin: 21px 0;
 		}
 	}
 	&__social-wrap {
@@ -182,7 +182,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: 10px 20px;
+		padding: 10px 20px 10px 32px;
 
 		& > li {
 			flex: 0 0 auto;

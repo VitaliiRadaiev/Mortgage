@@ -6,7 +6,7 @@
         min-width: 292px;
         padding: 15px 34px 15px 25px;
         justify-content: space-between;
-        @include maintext(20,700,20);
+        @include maintext(20,900,20);
         text-transform: uppercase;
         align-items: center;
         background-color: #78a752;
@@ -365,6 +365,10 @@
     flex-direction: column;
     padding: 30px 15px;
 
+    &_2 {
+        padding: 30px 21px 12px 15px;
+    }
+
     @media (max-width: $md3+px) {
         margin: 0 auto;
         &:first-child {
@@ -584,6 +588,14 @@
         flex: 1 1 auto;
         display: flex;
         align-items: flex-end;
+
+        & > a {
+            padding: 15px 22px 12px 25px;
+            font-size: 22px;
+            line-height: 22px;
+            font-weight: 900;
+
+        }
     }
 }
 
@@ -642,6 +654,7 @@
 
 .difference-services-information {
     max-width: 550px;
+    margin-bottom: 52px;
 
     @media (max-width: 1200px) {
         margin: 40px auto 0;
@@ -676,6 +689,18 @@
             &:not(:last-child) {
                  margin-bottom: 48px;
 
+            }
+
+            &:first-child {
+                & .difference-services-information__icon {
+                    margin-top: -18px;
+                }   
+            }
+
+            &:last-child {
+                & .difference-services-information__icon {
+                    margin-top: -12px;
+                }  
             }
         }
     }
@@ -756,7 +781,26 @@
         &_1 {
             flex: 0 1 570 / 1235 * 100%;
             border-right: 1px solid #e3e7ea;
-            padding: 42px 15px 47px 79px;
+            padding: 42px 15px 47px 76px;
+
+            & .services-action__link-btn {
+                & > a {
+                     padding: 15px 28px 13px 34px;
+                     font-size: 22px;
+                     line-height: 22px;
+
+                     @media (max-width: $md4+px) {
+                        font-size: 16px;
+                        min-width: 272px;
+                     }
+                    & > span {
+                        margin-left: 7px;
+                        margin-right: 13px;
+                        height: 26px;
+                        width: 26px;
+                    }
+                }
+            }
 
             @media (max-width: $md2+px) {
               border-right: none;
@@ -767,6 +811,26 @@
             padding-left: 110px;
             padding-right: 15px;
             padding: 42px 15px 47px 110px;
+
+            & .services-action__link-btn {
+                & > a {
+                     padding: 15px 11px 13px 23px;
+                     font-size: 22px;
+                     line-height: 22px;
+                     letter-spacing: -0.2px;
+
+                     @media (max-width: $md4+px) {
+                        font-size: 16px;
+                        min-width: 272px;
+                     }
+                    & > span {
+                        margin-left: 7px;
+                        margin-right: 13px;
+                        height: 26px;
+                        width: 26px;
+                    }
+                }
+            }
         }
     }
     &__title {
@@ -789,12 +853,12 @@
     }
     &__link-btn {
 
-        & > a {
+/*        & > a {
             @media (max-width: $md4+px) {
                font-size: 16px;
                min-width: 272px;
             }
-        }
+        }*/
     }
 }
 

@@ -192,7 +192,7 @@
 .top-blog-list {
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	//justify-content: center;
 	padding: 20px 20px 20px 0px;
 	min-height: 79px;
 	box-shadow: 0 1px 20px rgba(0, 0, 0, 0.07);
@@ -201,7 +201,7 @@
 	z-index: 10;
 	margin-bottom: 68px;
 
-	@media (max-width: 1200px) {
+	@media (max-width: 1280px) {
 		justify-content: space-between;
 	}
 
@@ -209,17 +209,18 @@
 		display: block;
 		flex: 0 0 auto;
 
-		@media (min-width: 1200px) {
+		@media (min-width: 1280px) {
 			display: none;
 		}
 	}
 	&__menu-wrap {
+		padding-left: 3.2%;
 
-		@media (min-width: 1200px) {
+		@media (min-width: 1280px) {
 			display: block !important;
 		}
 
-		@media (max-width: 1200px) {
+		@media (max-width: 1280px) {
 			position: absolute;
 			top: 100%;
 			left: 0;
@@ -237,7 +238,7 @@
 		display: flex;
 		flex-wrap: wrap;
 
-		@media (max-width: 1200px) {
+		@media (max-width: 1280px) {
 			width: 100%;
 			display: block;
 		}
@@ -261,13 +262,23 @@
 				}
 			}
 
+			&:nth-child(1) {& > a{padding: 10px 41px 10px 21px;}}
+			&:nth-child(2) {& > a{padding: 10px 18px 10px 24px;}}
+			&:nth-child(3) {& > a{padding: 10px 22px 10px 24px;}}
+			&:nth-child(4) {& > a{padding: 10px 24px 10px 15px;}}
+			&:nth-child(5) {& > a{padding: 10px 24px 10px 10px;}}
+
 			& > a {
 				display: inline-block;
-				padding: 10px 24px;
+				padding: 10px 24px 10px 24px;
 				@include text(16,400,16);
 				color: #404549;
 				transition: all .2s ease;
 				white-space: nowrap;
+
+				@media (max-width: 1280px) {
+					padding: 10px 24px 10px 24px !important;
+				}
 
 				@media (max-width: $md3+px) {
 					white-space: pre-wrap;
@@ -289,7 +300,7 @@
 
 	&__form-search {
 		width: 100%;
-		max-width: 265px;
+		max-width: 262px;
 		margin-left: 20px;
 	}
 }

@@ -164,7 +164,7 @@
 
 // ==== QUICK CONTACT =====================================================
 .quick-contact {
-	padding: 112px 0 70px;
+	padding: 112px 0 29px;
 
 	@media (max-width: $md2+px) {
 		padding: 30px 0 70px;
@@ -184,7 +184,7 @@
 			flex: 0 0 597 / 1235 * 100%;
 			display: flex;
 			justify-content: center;
-			padding: 0 20px;
+			padding: 0 29px 0 20px;
 
 			@media (max-width: $md2+px) {
 				padding: 0;
@@ -219,11 +219,23 @@
 			line-height: 30px;
 		}
 	}
-	&__form-wrap {}
+	&__form-wrap {
+		max-width: 607px;
+	}
 
 	&__form {
 		&.from-navigation {
 			padding: 11px 0 0;
+		}
+	}
+
+	& .form-contact__submit {
+		& > span {
+			&:last-child {
+				height: 17px;
+				width: 17px;
+				margin-right: 4px;
+			}
 		}
 	}
 }
@@ -235,7 +247,7 @@
 
 // ==== CONTACT INFO =====================================================
 .contact-info {
-	min-height: 193px;
+	min-height: 184px;
 	background-color: #53575a;
 	padding: 20px 0;
 	display: flex;
@@ -309,6 +321,8 @@
 	&__title {
 		color: #fff;
 		@include text(26,400,36);
+		margin-top: 5px;
+		margin-bottom: -8px;
 
 		@media (max-width: $md4+px) {
 			text-align: center;
@@ -324,7 +338,7 @@
 	&__email {
 		& > a {
 			color: #e9933e;
-			@include text(30,400,60);
+			@include text(30,400,59);
 		}
 
 		@media (max-width: $md3+px) {
