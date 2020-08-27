@@ -2359,13 +2359,14 @@ textarea.input {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 46.5%;
           flex: 0 1 46.5%;
-  padding-top: 0;
+  padding: 9px 20px 20px 32px;
 }
 
 .logo-box__column_3 {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 53.5%;
           flex: 0 1 53.5%;
+  padding: 20px 16px 21px 28px;
 }
 
 .our-loans {
@@ -2557,13 +2558,13 @@ textarea.input {
 }
 
 .why-use-services__bottom {
-  margin-top: 33px;
+  margin-top: 14px;
 }
 
 .why-use-services__img {
   height: 0;
   width: 100%;
-  padding-bottom: 62%;
+  padding-bottom: 57.5%;
 }
 
 .why-use-services__img > img {
@@ -2724,7 +2725,7 @@ textarea.input {
 }
 
 .about-text-left-block__body.container {
-  padding: 0 24px;
+  padding: 0 43px 0 5px;
 }
 
 .about-text-left-block__column_1 {
@@ -2753,7 +2754,7 @@ textarea.input {
   font-family: "OpenSans";
   font-size: 16px;
   font-weight: 400;
-  line-height: 27px;
+  line-height: 26px;
 }
 
 .about-text-left-block__text p {
@@ -2771,11 +2772,11 @@ textarea.input {
   display: -ms-flexbox;
   display: flex;
   color: #53575a;
-  min-height: 429px;
+  min-height: 408px;
 }
 
 .about-text-right-block__body.container {
-  padding: 0 24px;
+  padding: 0 43px 0 5px;
 }
 
 .about-text-right-block__column_1 {
@@ -2803,23 +2804,24 @@ textarea.input {
 }
 
 .about-text-right-block__text-wrap {
-  max-width: 504px;
+  max-width: 507px;
+  width: 100%;
 }
 
 .about-text-right-block__title {
-  margin-top: 30px;
+  margin-top: 26px;
   font-family: "MuseoSansRounded", sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 40px;
-  margin-bottom: 19px;
+  margin-bottom: 20px;
 }
 
 .about-text-right-block__text {
   font-family: "OpenSans";
   font-size: 16px;
   font-weight: 400;
-  line-height: 27px;
+  line-height: 26px;
 }
 
 .about-text-right-block__text p {
@@ -2845,6 +2847,7 @@ textarea.input {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 61px 1px 1px 111px;
 }
 
 .sub-bunner .about-text-left-block__img {
@@ -2867,7 +2870,7 @@ textarea.input {
 
 .sub-bunner .about-text-left-block__text p {
   max-width: 555px;
-  margin: 19px 0;
+  margin: 10px 0 20px;
 }
 
 .second-about-banner {
@@ -2899,7 +2902,7 @@ textarea.input {
 }
 
 .second-about-banner__body.container {
-  padding: 0 24px;
+  padding: 0 5px;
 }
 
 .second-about-banner__card {
@@ -2945,7 +2948,7 @@ textarea.input {
 }
 
 .history {
-  padding: 67px 0 106px;
+  padding: 87px 0 106px;
 }
 
 .history.container {
@@ -3070,7 +3073,7 @@ textarea.input {
 .top-slider-history__circle .year {
   position: absolute;
   top: 41px;
-  left: 0;
+  left: 1px;
   -webkit-transform: translateX(-30%);
       -ms-transform: translateX(-30%);
           transform: translateX(-30%);
@@ -3079,6 +3082,7 @@ textarea.input {
   font-size: 40px;
   font-weight: 700;
   line-height: 40px;
+  font-family: "GTWalsheimPro-Bold";
 }
 
 .top-slider-history__circle .bottom-decoration {
@@ -3128,7 +3132,7 @@ textarea.input {
 
 .center-history-slider__item {
   width: 100%;
-  padding: 78px 0 78px 103px;
+  padding: 76px 0 78px 92px;
   background: #fff;
   -webkit-box-shadow: 0 10px 50px rgba(0, 0, 0, 0.06);
           box-shadow: 0 10px 50px rgba(0, 0, 0, 0.06);
@@ -3158,10 +3162,7 @@ textarea.input {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding: 20px 80px 20px 20px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding: 43px 83px 20px 20px;
 }
 
 .center-history-slider__img {
@@ -3180,7 +3181,7 @@ textarea.input {
 
 .team {
   background-color: #edf0f2;
-  padding: 109px 0 2px;
+  padding: 112px 0 7px;
 }
 
 .team__head {
@@ -5975,7 +5976,7 @@ textarea.input {
 
 @media (min-width: 1440px) {
   .testimonials__slider-wrap {
-    margin-left: 97px;
+    margin-left: 102px;
   }
 }
 
@@ -6495,6 +6496,10 @@ textarea.input {
 
   .about-text-right-block__text p {
     max-width: none;
+  }
+
+  .sub-bunner .about-text-left-block__column_2 {
+    padding: 0;
   }
 
   .sub-bunner .about-text-left-block__img {

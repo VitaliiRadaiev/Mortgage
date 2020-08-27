@@ -74,7 +74,6 @@
 
 
 // ==== about-text-left-block =====================================================
-.sub-bunner {}
 
 .about-text-left-block {
     &__body {
@@ -87,7 +86,7 @@
         }
 
         &.container {
-            padding: 0 24px;
+            padding: 0 43px 0 5px;
 
             @media (max-width: 1200px) {
                 padding: 0 15px;
@@ -123,7 +122,7 @@
     }
 
     &__text {
-        @include text(16, 400, 27);
+        @include text(16, 400, 26);
 
         @media (max-width: $md4+px) {
             font-size: 14px;
@@ -159,14 +158,14 @@
     &__body {
         display: flex;
         color: $textColor;
-        min-height: 429px;
+        min-height: 408px;
 
         @media (max-width: $md2+px) {
             display: block;
         }
 
         &.container {
-            padding: 0 24px;
+            padding: 0 43px 0 5px;
 
             @media (max-width: 1200px) {
                 padding: 0 15px;
@@ -203,7 +202,8 @@
     }
 
     &__text-wrap {
-        max-width: 504px;
+        max-width: 507px;
+        width: 100%;
 
         @media (max-width: $md2+px) {
             max-width: none;
@@ -211,9 +211,9 @@
     }
 
     &__title {
-        margin-top: 30px;
+        margin-top: 26px;
         @include maintext(30, 700, 40);
-        margin-bottom: 19px;
+        margin-bottom: 20px;
 
         @media (max-width: $md4+px) {
             font-size: 26px;
@@ -222,7 +222,7 @@
     }
 
     &__text {
-        @include text(16, 400, 27);
+        @include text(16, 400, 26);
 
         @media (max-width: $md4+px) {
             font-size: 14px;
@@ -255,6 +255,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 61px 1px 1px 111px;
+
+        @media (max-width: $md2+px) {
+            padding: 0;
+        }
     }
 
     & .about-text-left-block__img {
@@ -281,7 +286,7 @@
 
         & p {
             max-width: 555px;
-            margin: 19px 0;
+            margin: 10px 0 20px;
 
             @media (max-width: $md2+px) {
                 max-width: none;
@@ -327,7 +332,7 @@
         transform: translateY(52px);
 
         &.container {
-            padding: 0 24px;
+            padding: 0 5px;
 
             @media (max-width: 1200px) {
                 padding: 0 15px;
@@ -410,7 +415,7 @@
 
 // ==== HISTORY =====================================================
 .history {
-    padding: 67px 0 106px;
+    padding: 87px 0 106px;
 
     @media (max-width: $md4+px) {
        padding: 50px 0 50px;
@@ -562,10 +567,11 @@
         & .year {
             position: absolute;
             top: 41px;
-            left: 0;
+            left: 1px;
             transform: translateX(-30%);
             color: #3f3f3f;
             @include maintext(40, 700, 40);
+            font-family: "GTWalsheimPro-Bold";
 
             @media (max-width: 1200px) {
                 font-size: 30px;
@@ -639,7 +645,7 @@
 
     &__item {
         width: 100%;
-        padding: 78px 0 78px 103px;
+        padding: 76px 0 78px 92px;
         background: #fff;
         box-shadow: 0 10px 50px rgba(0, 0, 0, 0.06);
 
@@ -674,8 +680,7 @@
             padding-left: 20px;
             display: flex;
             justify-content: flex-end;
-            padding: 20px 80px 20px 20px;
-            align-items: center;
+            padding: 43px 83px 20px 20px;
 
             @media (max-width: 1200px) {
                padding-right: 20px;
@@ -738,7 +743,7 @@
 // ==== TEAM =====================================================
 .team {
     background-color: #edf0f2;
-    padding: 109px 0 2px;
+    padding: 112px 0 7px;
 
     @media (max-width: $md4+px) {
         padding: 50px 0 2px;
