@@ -150,6 +150,18 @@
 		margin-bottom: 30px;
 		position: relative;
 
+		&:nth-child(2) {
+			& .calculator-cards__icon {
+				padding: 0px 0 12px 0;
+			}
+		}
+
+		&:nth-child(4) {
+			& .calculator-cards__title {
+				margin-bottom: 31px;
+			}
+		}
+
 		&:not(:last-child) {
 			&:before {
 				position: absolute;
@@ -178,11 +190,17 @@
 		padding: 20px 20px 10px 20px;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
 		align-items: center;
+		height: 100%;
 	}
 	&__icon {
 		margin-bottom: 25px;
+		height: 90px;
+		margin-top: 40px;
+
+		& > img {
+			height: 100%;
+		}
 	}
 	&__title {
 		color: $textColor;
@@ -193,6 +211,7 @@
 	&__subtitle {
 		color: #778086;
 		@include text(13,400,20);
+		max-width: 208px;
 	}
 }
 // ==== AND CALCULATOR CARDS =====================================================
@@ -268,6 +287,20 @@
 
 	& .enquire-online__subtitle {
 		max-width: 511px;
+	}
+
+	& .enquire-online__link-btn {
+
+		& > a {
+			padding: 15px 32px 15px 35px;
+			justify-content: flex-start;
+			& > span {
+				margin-left: 8px;
+				width: 25px;
+				height: 25px;
+			}
+		}
+
 	}
 }
 // ==== AND ENQUIRE ONLINE =====================================================
