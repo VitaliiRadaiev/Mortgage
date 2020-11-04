@@ -14,6 +14,7 @@
 		z-index: -1;
 		width: 100%;
 		height: 665px;
+		cursor: pointer;
 
 		&:before {
 			position: absolute;
@@ -24,6 +25,15 @@
 			height: 100%;
 			background: rgba(#000, 0.08);
 			z-index: 1;
+		}
+
+		& video {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
 		}
 	}
 	&__top {
@@ -132,32 +142,76 @@
 	&__item {
 		background: #fff;
 		box-shadow: 0 3px 40px rgba(0, 0, 0, 0.08);
+		display: block;
+		flex:0 1 33.3333%;
+		position: relative;
+
+		&:before {
+			position: absolute;
+			content: '';
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background: transparent;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+			transition: all .2s ease;
+		}
 
 		@media (max-width: $md3+px ) {
 			padding: 60px 15px 40px;
 		}
 
+		@media (min-width: 992px) {
+			&:hover {
+				&:before {
+					background: linear-gradient(180deg, #f4bb44 0%, #e9933e 100%);
+					width: 110%;
+					height: 110%;
+				}
+
+				& .bottom-home-banner__title, .bottom-home-banner__subtitle, .bottom-home-banner__text {
+					color: #fff;
+				}
+
+				& .bottom-home-banner__icon {
+					& .img-svg path {
+						stroke: #fff;
+					}
+				}
+			}
+		}
+
 		&_1 {
 			margin: 35px 0;
 			min-height: 421px;
-			flex:0 1 400 / 1235 * 100%;
+			//flex:0 1 400 / 1235 * 100%;
 			padding: 61px 30px 30px 45px;
 		}
 		&_2 {
-			height: 495px;
-			flex:0 1 432 / 1235 * 100%;
-			color: #fff !important;
-			padding: 98px 65px 40px;
-			background-image: linear-gradient(180deg, #f4bb44 0%, #e9933e 100%);
+			//height: 495px;
+			min-height: 421px;
+			//flex:0 1 432 / 1235 * 100%;
+			//color: #fff !important;
+			//padding: 98px 65px 40px;
+			padding: 61px 30px 30px 45px;
+			//background-image: linear-gradient(180deg, #f4bb44 0%, #e9933e 100%);
 
 			& .bottom-home-banner__title, .bottom-home-banner__subtitle, .bottom-home-banner__text {
-				color: #fff;
+				//color: #fff;
+			}
+
+			& .bottom-home-banner__icon {
+				& .img-svg path {
+					stroke: #e9933e;
+				}
 			}
 		}
 		&_3 {
 			margin: 35px 0;
 			min-height: 421px;
-			flex:0 1 400 / 1235 * 100%;
+			//flex:0 1 400 / 1235 * 100%;
 			padding: 63px 30px 30px 45px;
 		}
 	}
@@ -166,6 +220,9 @@
 		@include maintext(70,900,60);
 		color: $textColor;
 		text-transform: uppercase;
+		position: relative;
+		z-index: 2;
+		transition: all .2s ease;
 
 		@media (max-width: $md4+px ) {
 			font-size: 50px;
@@ -175,6 +232,9 @@
 		@include maintext(40,500,40);
 		color: #8c9297;
 		margin-bottom: 31px;
+		position: relative;
+		z-index: 3;
+		transition: all .2s ease;
 
 		@media (max-width: $md4+px ) {
 			font-size: 29px;
@@ -186,6 +246,9 @@
 		max-width: 300px;
 		color: #8c9297;
 		margin-bottom: 29px;
+		position: relative;
+		z-index: 4;
+		transition: all .2s ease;
 
 		@media (max-width: 1250px ) {
 			margin: 0 auto 29px;
@@ -193,6 +256,10 @@
 	}
 	&__icon {
 		text-align: center;
+		transition: all .2s ease;
+
+		position: relative;
+		z-index: 5;
 	}
 }
 
@@ -346,17 +413,27 @@
 			margin-bottom: 30px;
 		}
 
-		& > span {
-
-			&:first-child {
-				color: #e9933e;
-				border-bottom: 4px solid #e9933e;
+		& > a {
+				color: $textColor;
+				border-bottom: 4px solid transparent;
 				padding-bottom: 5px;
+				transition: all .2s ease;
+
+				&.active {
+					color: #e9933e;
+					border-bottom: 4px solid #e9933e;
+				}
 
 				@media (max-width: $md3+px ) {
 					margin-bottom: 20px;
 				}
-			}
+
+				@media (min-width: 992px) {
+					&:hover {
+						color: #e9933e;
+						border-bottom: 4px solid #e9933e;
+					}
+				}
 		}
 
 		& .hr {
@@ -373,18 +450,109 @@
 		}
 	}
 
+	&__tabs-content {
+		display: none;
+
+		&.active {
+			display: block;
+		}
+	}
+
 	&__list {
-		display: flex;
+		display: none;
 		margin: 0 -14.5px;
 		flex-wrap: wrap;
 		justify-content: center;
+
+		&.active {
+			display: flex;
+		}
 
 		& > li {
 			padding: 0 14.5px;
 			flex: 0 1 20%;
 			margin-bottom: 22px;
 
+			@media (min-width: 992px) {
+				&:nth-child(2) {
+					& .card-our-loans:hover {
+						& .card-our-loans__icon {
+							& .img-svg path {
+								fill: none;
+								stroke: #fff;
+							}
+						}
+					}
+				}
+
+				&:nth-child(4) {
+					& .card-our-loans:hover {
+						& .card-our-loans__icon {
+							& .img-svg path {
+								fill: none;
+								stroke: #fff;
+							}
+						}
+					}
+				}
+			}
+
 		}
+	}
+
+	&__calculator {
+		&-title {
+			color: #F78C00;
+			font-size: 35px;
+		    line-height: 49px;
+		    font-family: "OpenSans",sans-serif;
+		    text-align: center;
+		    margin-bottom: 30px;
+
+		    @media (max-width: $md3+px) {
+		    	font-size: 25px;
+		    	line-height: 27px;
+		    }
+
+		}
+
+		& > ul {
+			display: none;
+			margin: 0 -14.5px;
+			flex-wrap: wrap;
+			justify-content: center;
+			display: flex;
+
+			& > li {
+				padding: 0 14.5px;
+				flex: 0 1 20%;
+				margin-bottom: 22px;
+
+				& .card-our-loans__icon {
+					& .cls-1  {
+						stroke-width: 1px;
+					}
+				}
+
+				& .card-our-loans:hover {
+					& .card-our-loans__icon {
+						& .img-svg path {
+							fill: none;
+							stroke: #fff;
+						}
+
+						& .cls-1  {
+							stroke: #fff;
+							stroke-width: 1px;
+						}
+					}
+				}
+			}
+		}
+
+
+
+
 	}
 	&__card {}
 }
@@ -400,19 +568,67 @@
 	text-transform: uppercase;
 	text-align: center;
 	flex-direction: column;
+	transition: all .2s ease;
+	position: relative;
+
+	&:before {
+		position: absolute;
+		content: '';
+		top: 50%;
+		left: 50%;
+		width: 100%;
+		height: 100%;
+		transform: translate(-50%,-50%);
+		background: transparent;
+		transition: all .2s ease;
+		z-index: 1;
+	}
+
+	@media (min-width: 992px) {
+		&:hover {
+			&:before {
+				width: 110%;
+				height: 110%;
+				background: linear-gradient(180deg, #f4bb44 0%, #e9933e 100%);
+			}
+
+			& .card-our-loans__title, .card-our-loans__subtitle {
+				color: #fff;
+			}
+
+			& .card-our-loans__icon {
+				& .img-svg path {
+					fill: #fff;
+				}
+			}
+		}
+	}
 
 	&__icon {
-		margin-bottom: 24px;
-		height: 102px;
+		margin-bottom: 44px;
+		height: 82px;
 		display: flex;
 		justify-content: center;
 		align-items: flex-end;
+		transition: all .2s ease;
+		position: relative;
+		z-index: 2;
+
+		& .img-svg {
+			height: 100%;
+		}
 	}
 	&__title {
 		@include maintext(20,900,20);
+		transition: all .2s ease;
+		position: relative;
+		z-index: 3;
 	}
 	&__subtitle {
 		@include maintext(20,500,20);
+		transition: all .2s ease;
+		position: relative;
+		z-index: 4;
 	}
 }
 
@@ -548,6 +764,16 @@
 
 		& > img {
 			object-fit: unset;
+		}
+
+		@media (min-width: 1460px) {
+			padding-bottom: 0;
+			height: 839.5px;
+
+			& > img {
+				object-fit: cover;
+				object-position: top;
+			}
 		}
 	}
 }

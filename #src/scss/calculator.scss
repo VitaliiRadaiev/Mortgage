@@ -115,23 +115,32 @@
 
 // ==== CALCULATOR CARDS =====================================================
 .calculator-cards {
+	font-size: 10px;
 	position: relative;
-	padding:119px 0 89px;
+	padding:11.9em 0 8.9em;
 	background-color: #edf0f2;
+
+/*	@media(max-width: 1440px) {
+		font-size: 8px;
+	}
+
+	@media(max-width: 1024px) {
+		font-size: 10px;
+	}*/
 
 
 	@media (max-width: $md4+px) {
-		padding: 70px 0 70px;
+		padding: 7em 0 7em;
 	}
 
 	&__arrow-down {
 		position: absolute;
-		bottom: 47px;
+		bottom: 4.7em;
 		left: 50%;
 		transform: translateX(-50%);
 
 		@media (max-width: $md4+px) {
-			bottom: 40px;
+			bottom: 4em;
 		}
 	}
 
@@ -141,40 +150,40 @@
 
 	&__wrap {
 		display: flex;
-		margin: 0 -15px;
+		margin: 0 -1.5em;
 		justify-content: center;
 		flex-wrap: wrap;
 	}
 	&__item {
-		padding: 0 15px;
-		margin-bottom: 30px;
+		padding: 0 1.5em;
+		margin-bottom: 3em;
 		position: relative;
 
 		&:nth-child(2) {
 			& .calculator-cards__icon {
-				padding: 0px 0 12px 0;
+				padding: 0px 0 1.2em 0;
 			}
 		}
 
-		&:nth-child(4) {
+/*		&:nth-child(4) {
 			& .calculator-cards__title {
-				margin-bottom: 31px;
+				margin-bottom: 1.51em;
 			}
 		}
-
+*/
 		&:not(:last-child) {
 			&:before {
 				position: absolute;
 				content: '';
-				width: 58px;
-				height: 9px;
+				width: 5.8em;
+				height: 0.9em;
 				background-color: #e9933e;
 				top: 50%;
 				right: 0;
 				transform: translate(50%, -50%);
 				z-index: 2;
 
-				@media (max-width: 1280px) {
+				@media (max-width: 1024px) {
 					display: none;
 				}
 			}
@@ -182,21 +191,21 @@
 	}
 
 	&__inner {
-		width: 286px;
-		min-height: 321px;
+		width: 28.6em;
+		min-height: 32.1em;
 		box-shadow: 0 3px 20px rgba(119, 128, 134, 0.08);
 		background-color: #ffffff;
 		text-align: center;
-		padding: 20px 20px 10px 20px;
+		padding: 2em 2em 1em 2em;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		height: 100%;
 	}
 	&__icon {
-		margin-bottom: 25px;
-		height: 90px;
-		margin-top: 40px;
+		margin-bottom: 2.5em;
+		height: 9em;
+		margin-top: 4em;
 
 		& > img {
 			height: 100%;
@@ -205,13 +214,17 @@
 	&__title {
 		color: $textColor;
 		@include maintext(20,700,20);
+		font-size: 2em;
+		line-height: 1em;
 		text-transform: uppercase;
-		margin-bottom: 11px;
+		margin-bottom: 0.51em;
 	}
 	&__subtitle {
 		color: #778086;
 		@include text(13,400,20);
-		max-width: 208px;
+		font-size: 1.3em;
+		line-height: 1.53em;
+		max-width: 16em;
 	}
 }
 // ==== AND CALCULATOR CARDS =====================================================

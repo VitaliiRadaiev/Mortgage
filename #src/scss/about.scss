@@ -2,9 +2,13 @@
 .about-banner {
     position: relative;
     padding: 20px 0 47px;
-    min-height: 681px;
+    min-height: 800px;
     display: flex;
     align-items: center;
+
+    @media (max-width: $md3+px) {
+        min-height: 620px;
+    }
 
     @media (max-width: $md4+px) {
         min-height: 481px;
@@ -16,6 +20,10 @@
         left: 0;
         height: 100%;
         width: 100%;
+
+        & img {
+            object-position: 0 0;
+        }
 
         &:before {
             position: absolute;
@@ -405,6 +413,10 @@
         @include text(16, 400, 26);
         color: #404549;
         max-width: 405px;
+
+        & p {
+            margin-bottom: 10px;
+        }
     }
 }
 
@@ -713,6 +725,10 @@
         @include text(26,400,36);
         color: $textColor;
 
+        & p {
+            margin-bottom: 30px;
+        }
+
         @media (max-width: $md2+px) {
              max-width: 650px;
         }
@@ -725,6 +741,10 @@
         @media (max-width: $md4+px) {
             font-size: 16px;
             line-height: 26px;
+
+            & p {
+                margin-bottom: 20px;
+            }
         }
 
     }
@@ -755,8 +775,41 @@
             margin-bottom: 30px;
         }
     }
-    &__list-wrap {}
+    &__list-wrap {
+        &.container {
+            max-width: 126.5rem;
+            padding: 0 1.5rem;
+        }
+    }
     &__list {}
+    &__bottom {
+        @include text(24,400,34);
+        color: #404549;
+
+        & p {
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: $md2+px) {
+            text-align: center;
+            margin-bottom: 30px;
+            max-width: none;
+        }
+
+        @media (max-width: $md3+px) {
+            font-size: 20px;
+            line-height: 30px;
+        }
+
+        @media (max-width: $md4+px) {
+            font-size: 16px;
+            line-height: 26px;
+
+            & p {
+                margin-bottom: 20px;
+            }
+        }
+    }
 }
 
 .head-team {
@@ -798,6 +851,10 @@
         color: #404549;
         max-width: 551px;
 
+        & p {
+            margin-bottom: 30px;
+        }
+
         @media (max-width: $md2+px) {
             text-align: center;
             margin-bottom: 30px;
@@ -812,6 +869,10 @@
         @media (max-width: $md4+px) {
             font-size: 16px;
             line-height: 26px;
+
+            & p {
+                margin-bottom: 20px;
+            }
         }
     }
 }
@@ -824,42 +885,91 @@
 
 
 .list-team {
+   
 
     & > li {
+
         display: flex;
         justify-content: center;
         position: relative;
 
-        &:nth-child(1) {
-            z-index: 5;
+        @for $i from 1 through 49  {
+            &:nth-child(#{$i}) {
+                z-index: 50-$i;
+            }
         }
-        &:nth-child(2) {
-            z-index: 4;
-        }
-        &:nth-child(3) {
-            z-index: 3;
-        }
-        &:nth-child(4) {
-            z-index: 2;
-        }
-        &:nth-child(5) {
-            z-index: 1;
-        }
+
     
-        @media (max-width: 1264px) {
+        @media (max-width: 1023px) {
             flex-wrap: wrap;
         }
 
         @media (max-width: $md4+px) {
             display: block;
         }
+
+        &._one {
+            & .list-team__cord-wrap {
+                @media (min-width: 1024px) {
+                    &:first-child:hover {
+                       & .card-team {
+                           position: absolute;
+                           left: 0;
+                           animation-name: cardTeamAnimation2;
+                           animation-duration: .6s;
+                            z-index: 3;
+                       }
+
+                       & .card-team__hover-box {
+                           right: 0;
+                       }
+                    }
+
+                }
+            }
+        }
+
+        &._two {
+            & .list-team__cord-wrap {
+                @media (min-width: 1024px) {
+                   &:first-child:hover {
+                       & .card-team {
+                           position: absolute;
+                           left: 0;
+                           animation-name: cardTeamAnimation;
+                           animation-duration: .6s;
+                           z-index: 3;
+                       }
+
+                       & .card-team__hover-box {
+                           right: 0;
+                       }
+                   }
+
+                    &:nth-child(2):hover {
+                        & .card-team {
+                            position: absolute;
+                            left: 0;
+                            animation-name: cardTeamAnimation4;
+                            animation-duration: .6s;
+                             z-index: 3;
+                        }
+
+                        & .card-team__hover-box {
+                            right: 0;
+                        }
+                    }
+
+                }
+            }
+        }
     }
     &__cord-wrap {
-        flex: 0 0 411.5px;
-        margin-bottom: 98px;
+        flex: 0 0 41.15rem;
+        margin-bottom: 9.8rem;
         transition: all .4s ease;
 
-        @media (max-width: 1264px) {
+        @media (max-width: 1023px) {
             position: relative;
             cursor: pointer;
 
@@ -875,14 +985,15 @@
         } 
 
         @media (max-width: $md4+px) {
-            margin-bottom: 50px;
+            margin-bottom: 5rem;
         }   
 
-        @media (min-width: 1265px) {
+        @media (min-width: 1024px) {
             &:first-child:hover {
                 & .card-team {
                     position: absolute;
                     left: 0;
+                     z-index: 3;
                 }
 
                 & .card-team__hover-box {
@@ -896,6 +1007,7 @@
                     left: 0;
                     animation-name: cardTeamAnimation2;
                     animation-duration: .6s;
+                     z-index: 3;
                 }
 
                 & .card-team__hover-box {
@@ -909,6 +1021,7 @@
                     left: 0;
                     animation-name: cardTeamAnimation3;
                     animation-duration: .6s;
+                     z-index: 3;
                 }
 
                 & .card-team__hover-box {
@@ -921,6 +1034,15 @@
     }
     &__card {
 
+    }
+
+    @keyframes cardTeamAnimation {
+        from {
+            left:15%;
+        }
+        to {
+            left: 0;
+        }
     }
 
     @keyframes cardTeamAnimation2 {
@@ -940,18 +1062,31 @@
             left: 0;
         }
     }
+
+    @keyframes cardTeamAnimation4 {
+        from {
+            left:49%;
+        }
+        to {
+            left: 0;
+        }
+    }
 }
 .card-team {
-    width: 411.5px;
+    width: 41.15rem;
     height: 100%;
     position: relative;
-    min-height: 421px;
-    padding: 20px 20px 0px 20px;
+    min-height: 42.1rem;
+    padding: 2rem 2rem 0px 2rem;
     transition: all 0.4s ease;
+
+    @media (max-width: 1023px) {
+        display: flex;
+    }
 
     @media (max-width: $md4+px) {
         width: 100%;
-        padding: 20px 10px 0px;
+        padding: 2rem 1rem 0px;
     }
 
     &__img {
@@ -959,53 +1094,79 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 421px;
+        height: 42.1rem;
+
+        & img {
+            object-position: 0 -2rem;
+        }
     }
 
     &__text-box {
         position: relative;
         z-index: 2;
-        box-shadow: 0 30px 60px rgba(152, 152, 152, 0.16);
+        box-shadow: 0 3rem 6rem rgba(152, 152, 152, 0.16);
         background: #fff;
-        margin-top: 323px;
-        min-height: 105px;
+        margin-top: 32.3rem;
+        min-height: 10.5rem;
         width: 100%;
-        padding: 30px 40px 27px 45px;
+        padding: 3rem 4rem 2.7rem 4.5rem;
 
         @media (max-width: $md4+px) {
-            padding:30px 20px;
+            padding:3rem 2rem;
         }
     }
     &__name {
         @include maintext(20,700,20);
-        margin-bottom: 5px;
+        font-size: 2rem;
+        line-height: 2rem;
+        margin-bottom: 0.5rem;
         color: $textColor;
         text-transform: uppercase;        
     }
     &__position {
         @include text(16,400,20);
         color: #8c9297;
+        font-size: 1.6rem;
+        line-height: 2rem;
     }
     &__hover-box {
         position: absolute;
             top: 0;
             right: -100%;
-            height: calc(100% - 98px);
-            width: calc(100% - 411.4px);
+            height: calc(100% - 9.8rem);
+            width: calc(100% - 41.14rem);
             background: #fff;
             z-index: 5;
-            box-shadow: 0 30px 60px rgba(152, 152, 152, 0.16);
+            box-shadow: 0 3rem 6rem rgba(152, 152, 152, 0.16);
             transition: all .4s ease;
             overflow: hidden;
-            padding: 40px 40px 30px 60px;
+            padding: 4rem 4rem 3rem 6rem;
 
           @include text(16,400,26);
           color: $textColor;
+          font-size: 1.6rem;
+          line-height: 2.6rem;
+
           & p {
-            margin: 15px 0;
+            margin: 1.5rem 0;
           }
 
-        @media (max-width: 1264px) {
+          & a {
+            @include text(16,400,26);
+            color: $textColor;
+            text-decoration: underline;
+            transition: all .2s ease;
+            font-size: 1.6rem;
+            line-height: 2.6rem;
+
+            @media (min-width: 992px) {
+                &:hover {
+                   color: #78a752;
+                }
+            }
+          }
+
+        @media (max-width: 1023px) {
             display: none;
             top: 100%;
             width: calc(100% - 40px);
@@ -1013,14 +1174,14 @@
             right: 0;
             left: 50%;
             transform: translateX(-50%);
-            padding: 0px 15px 20px;
+            padding: 0px 1.5rem 2rem;
             transition: none;
         }
 
         @media (max-width: $md4+px) {
             width: calc(100% - 20px);
-            font-size: 14px;
-            line-height: 22px;
+            font-size: 1.4rem;
+            line-height: 2.2rem;
         }    
     }
 }

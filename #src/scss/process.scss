@@ -12,7 +12,11 @@
 	z-index: 3;
 	padding-bottom: 38px;
 	&__body {
-
+		@media (max-width: $md3+px) {
+			&.container {
+				padding: 0;
+			}
+		}
 	}
 	&__wrap {
 		display: flex;
@@ -157,6 +161,42 @@
 			transform: translateX(-50%);
 			opacity: 0;
 			transition: all .2s ease;
+		}
+	}
+}
+
+.process-subbanner-slider {
+	& .slick-slide {
+		min-width: 247px;
+		margin: 0 10px;
+
+		& > div {
+			height: 100%;
+		}
+
+		& .process-subbanner__item {
+			height: 100%;
+		}
+
+		& .process-subbanner__title {
+			width: 247px;
+		}
+
+		&:not(:last-child) {
+			& .process-subbanner__title {
+				&:after {
+					position: absolute;
+					content: '';
+					top: 50%;
+					right: -10px;
+					height: 4px;
+					width: 34px;
+					transform: translate(50%, -50%);
+					background: #e9933e;
+					z-index: 2;
+
+				}
+			}
 		}
 	}
 }

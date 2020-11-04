@@ -130,6 +130,7 @@
 
 	&__inner {
 		display: flex;
+		position: relative;
 	}
 
 	&__apply-btn {
@@ -241,10 +242,11 @@
 
 		@media (max-width: $md2+px ) {
 			max-width: none;
+			text-align: center;
 		}
 
  		& > li {
-
+ 			position: relative;
  			&:not(:last-child) {
  				margin-bottom: 30px;
 
@@ -254,17 +256,24 @@
  			}
 
  			&:first-child .main-menu__sublist {
- 				top: 0;
+ 				top: 19px;
  			}
 
- 			&:not(:first-child):not(:last-child) .main-menu__sublist { 
+ 			&:not(:first-child):not(:last-child):not(:nth-child(2)):not(:nth-last-child(-n+2)) .main-menu__sublist { 
 				top: 50%;
-				transform: translate(100%, -44%);
+				transform: translate(100%, -25%);
  				
  			}
 
+ 			&:nth-child(2) .main-menu__sublist {
+ 				top: 19px;
+ 			}
+ 			&:nth-last-child(-n+2) .main-menu__sublist {
+ 				bottom: 12px;
+ 			}
+
  			&:last-child .main-menu__sublist {
- 				bottom: 0;
+ 				bottom: 12px;
  			}
 
  			@media (min-width: 992px ) {
@@ -359,10 +368,20 @@
 
 
 
-
-
-
  .from-navigation {
+
+
+ 	&.wpcf7-form {
+ 		& .wpcf7-response-output { 
+	 		border: none;
+	 		padding-left: 0;
+	 		color: #404549;
+	 		margin: 0;
+	 		@include text(16,400,16);
+
+ 		}
+ 	}
+
   	padding:31px 0 30px 18px;
   	max-width: 630px;
 

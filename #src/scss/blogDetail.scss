@@ -14,12 +14,12 @@
 	}
 
 	& .blog-banner__title {
-		margin-top: 135px;
-		margin-bottom: 124px;
+		// margin-top: 135px;
+		// margin-bottom: 124px;
 
-		@media (max-width: $md4+px) {
-			margin-top: 80px;
-		}
+		// @media (max-width: $md4+px) {
+		// 	margin-top: 80px;
+		// }
 	}
 }
 // ==== AND BLOG DETAIL BANNER =====================================================
@@ -66,6 +66,18 @@
 
 
 .article-blog-detail {
+	@include text(16,400,26);
+	color: #404549;
+
+	@media (max-width: $md4+px) {
+		font-size: 14px;
+		line-height: 24px;
+	}
+
+	&  p {
+		margin: 22px 0;	
+	}
+
 	&__title {
 		@include maintext(30,700,40);
 		color: $textColor;
