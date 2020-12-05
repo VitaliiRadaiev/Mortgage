@@ -835,3 +835,106 @@ h6 {
 	}
 }
 // ======= AND ACCORDION ==================================================
+
+
+// ======= text-content ==================================================
+.text-content {
+	margin: 100px 0 200px;
+
+	& h3 {
+		font-size: 30px;
+		line-height: 1.33em;
+		color: $textColor;
+		margin-bottom: 37px;
+		font-weight: 700;
+
+		@media (max-width: $md2+px) {
+		    text-align: center;
+		}
+
+		@media (max-width: $md4+px) {
+		    margin-bottom: 20px;
+		}
+	}
+
+	& p {
+		font-family: "OpenSans", sans-serif;
+		color: #404549;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 1.625em;
+		margin-bottom: 1.25em;
+
+		@media (max-width: $md4+px) {
+		    font-size: 14px;
+		    text-align: center;
+		}
+
+	}
+
+	& img {
+		text-align: center;
+		max-width: 100%;
+		
+		&.left {
+			float: left;
+			margin-right: 15px;
+		}
+
+		&.right {
+			float: right;
+			margin-left: 15px;
+		}
+
+	}
+
+	& figure {
+		margin: 25px 0;
+		text-align: center;
+
+		& img {
+			max-width: 100%;
+		}
+	}
+}
+// ======= AND text-content ==================================================
+
+// ======= block column ==================================================
+.block-column {
+	margin-bottom: 25px;
+	&-2 {
+		display: flex;
+
+		@media (max-width: $md2+px) {
+			display: block;
+		}
+
+
+		& .column {
+			flex: 0 1 50%;
+
+			& .services-subbanner-info__list {
+				margin-top: 0;
+			}
+
+			&:first-child {
+				padding-right: 30px;
+			}
+
+			&:last-child {
+				padding-left: 30px;
+			}
+
+			& p {
+				max-width: 523px;
+			}
+
+			@media (max-width: $md2+px) {
+				padding: 0 !important;
+
+				& p {max-width: none;}
+			}
+		}
+	}
+}
+// ======= AND tblock column ==================================================
