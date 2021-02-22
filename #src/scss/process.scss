@@ -45,9 +45,9 @@
 					background: #e9933e;
 					z-index: 2;
 
-					@media (max-width: 1280px) {
-						display: none;
-					}
+					// @media (max-width: 1280px) {
+					// 	display: none;
+					// }
 
 					@media (max-width: $md4+px) {
 						display: block;
@@ -149,9 +149,9 @@
 		flex-direction: column;
 		transition: all .2s ease;
 
-		@media (max-width: $md2+px) {
-			padding: 66px 20px 52px 35px !important;
-		}
+		// @media (max-width: $md2+px) {
+		// 	padding: 66px 20px 52px 35px !important;
+		// }
 
 		&:before {
 			position: absolute;
@@ -166,9 +166,15 @@
 }
 
 .process-subbanner-slider {
+	&.slick-slider {
+		margin-right: -15px;
+	}
+
 	& .slick-slide {
 		min-width: 247px;
-		margin: 0 10px;
+		//margin: -20px 0;
+		padding: 20px 0;
+
 
 		& > div {
 			height: 100%;
@@ -188,7 +194,7 @@
 					position: absolute;
 					content: '';
 					top: 50%;
-					right: -10px;
+					right: 0px;
 					height: 4px;
 					width: 34px;
 					transform: translate(50%, -50%);

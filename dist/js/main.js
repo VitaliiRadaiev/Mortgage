@@ -1196,7 +1196,7 @@ if ($('.accordion').length>0) {
 
 	if(aboutUsCards) {
 
-		if(document.documentElement.clientWidth <= 770 ) {
+		if(document.documentElement.clientWidth <= 1280 ) {
 			(async function() {
 				await aboutUsCards.classList.add('process-subbanner-slider-mobile');
 				await initialLastViewsSlider()
@@ -1204,7 +1204,7 @@ if ($('.accordion').length>0) {
 		}
 
 		window.addEventListener('resize', function() {
-			if(document.documentElement.clientWidth <= 770 ) {
+			if(document.documentElement.clientWidth <= 1280 ) {
 				(async function() {
 					if(!aboutUsCards.classList.contains('process-subbanner-slider-mobile')) {
 						await aboutUsCards.classList.add('process-subbanner-slider-mobile');
@@ -1213,7 +1213,7 @@ if ($('.accordion').length>0) {
 				})();
 			} 
 
-			if(document.documentElement.clientWidth > 770) {
+			if(document.documentElement.clientWidth > 1280) {
 
 				(async function() {
 					await $('.process-subbanner-slider-mobile').slick('unslick')
@@ -1229,8 +1229,9 @@ if ($('.accordion').length>0) {
 			slidesToScroll: 1,
 			arrows: false,
 			adaptiveHeight: true,
-			centerMode: true,
-			variableWidth: true
+			infinite: false,
+			variableWidth: true,
+			touchThreshold: 10,
 		})
 	}
 }
@@ -1395,6 +1396,7 @@ if($('.resource__list').length>0) {
 	})
 }
 // === // resource block ==================================================================
+
 
 
 });

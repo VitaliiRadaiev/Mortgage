@@ -1,8 +1,121 @@
+.drop-down {
+	position: relative;
+
+	
+		&:hover {
+			& .drop-down__trigger:before {
+				transform: translateY(-50%) scale(1, -1);
+			}
+			
+			& .drop-down__list {
+				transform: scaleY(1);
+			}
+		}
+	
+
+	&._open {
+		& .drop-down__trigger:before {
+			transform: translateY(-50%) scale(1, -1);
+		}
+		
+		& .drop-down__list {
+			transform: scaleY(1);
+		}
+	}
+
+	&__trigger {
+		position: relative;
+		padding-right: 20px;
+
+		&:before {
+			position: absolute;
+			font-family: 'icomoon';
+			content: "\e902";
+			top: 50%;
+			right: 10px;
+			transform: translateY(-50%);
+			font-size: 22px;
+			transition: all .2s ease;
+		}
+	}
+
+	&__list {
+		position: absolute;
+		top: 100%;
+		transition: all .4s ease;
+		transform: scaleY(0);
+	}
+}
 
 .header {
 	background: #fff;
 	position: relative;
 	z-index: 50;
+
+
+		&__top {
+			display: flex;
+			justify-content: flex-end;
+			position: relative;
+			z-index: 5;
+			&:before {
+				position: absolute;
+				content: '';
+				right: 15px;
+				bottom: -1px;
+				height: 1px;
+				width: 60%;
+				/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#7a7a7a+0,7a7a7a+100&0+0,0.65+100 */
+				background: -moz-linear-gradient(left,  rgba(122,122,122,0) 0%, rgba(122,122,122,0.65) 100%); /* FF3.6-15 */
+				background: -webkit-linear-gradient(left,  rgba(122,122,122,0) 0%,rgba(122,122,122,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+				background: linear-gradient(to right,  rgba(122,122,122,0) 0%,rgba(122,122,122,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007a7a7a', endColorstr='#a67a7a7a',GradientType=1 ); /* IE6-9 */
+
+
+				@media (max-width: $md4+px) {
+					width: 85%;
+				}
+			}
+		}
+
+		&__brrower {
+			display: inline-block;
+			min-width: 220px;
+		}
+
+		&__brrower-title {
+			font-size: 14px;
+			line-height: 2em;
+			background-color: #f0f0f0;
+			padding: 0 25px;
+		}
+
+		&__brrower-list {
+			background-color: #f0f0f0;
+			min-width: 100%;
+			border-top: 1px solid rgba(#000, 0.2);
+
+			& > li {
+				&:not(:last-child) {
+					border-bottom: 1px solid rgba(#000, 0.2);
+				}
+			}
+		}
+
+		&__brrower-link {
+			color: #000;
+			transition: all .2s ease;
+			display: inline-block;
+			line-height: 2em;
+			padding: 0 25px;
+			width: 100%;
+			@media (min-width: 992px) {
+				&:hover {
+					background-color: rgba(#000, 0.2);
+				}
+			}
+		}
+
 
 	&__body {
 		padding: 20px 0;
