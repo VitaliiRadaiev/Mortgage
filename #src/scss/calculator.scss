@@ -1,6 +1,5 @@
 // ==== AND PROCESS =====================================================
 .calculator {
-	
 	&.services-banner {
 		margin-bottom: 17px;
 	}
@@ -8,16 +7,16 @@
 		padding: 59px 69px 79px 80px;
 
 		@media (max-width: $md2+px) {
-		    text-align: left;
+			text-align: left;
 		}
 
 		@media (max-width: $md3+px) {
-		    text-align: center;
-		    padding: 36px 40px 34px 47px;
+			text-align: center;
+			padding: 36px 40px 34px 47px;
 		}
 
 		@media (max-width: $md3+px) {
-		    padding: 36px 15px 34px;
+			padding: 36px 15px 34px;
 		}
 	}
 	& .services-banner__title {
@@ -29,8 +28,6 @@
 	}
 }
 // ==== AND PROCESS =====================================================
-
-
 
 // ==== calculator-block-text-right =====================================================
 .calculator-block-text-right {
@@ -87,7 +84,7 @@
 		}
 	}
 	&__title {
-		@include maintext(30,700,40);
+		@include maintext(30, 700, 40);
 		color: $textColor;
 		margin-bottom: 40px;
 
@@ -96,7 +93,7 @@
 		}
 	}
 	&__text {
-		@include text(24,400,34);
+		@include text(24, 400, 34);
 		color: #404549;
 
 		@media (max-width: $md4+px) {
@@ -111,16 +108,14 @@
 }
 // ==== AND calculator-block-text-right =====================================================
 
-
-
 // ==== CALCULATOR CARDS =====================================================
 .calculator-cards {
 	font-size: 10px;
 	position: relative;
-	padding:11.9em 0 8.9em;
+	padding: 11.9em 0 8.9em;
 	background-color: #edf0f2;
 
-/*	@media(max-width: 1440px) {
+	/*	@media(max-width: 1440px) {
 		font-size: 8px;
 	}
 
@@ -128,9 +123,70 @@
 		font-size: 10px;
 	}*/
 
-
 	@media (max-width: $md4+px) {
 		padding: 7em 0 7em;
+	}
+
+	&.calculator-cards_v2 {
+		background-color: transparent;
+		padding-top: 38px;
+		margin-bottom: 18px;
+
+		@media (max-width: $md4+px) {
+			font-size: 8px !important;
+		}
+
+		& .calculator-cards__wrap {
+			width: auto;
+			margin: 0 -9px;
+		}
+
+		& .calculator-cards__item {
+			padding: 0 9px;
+			flex: 0 1 16.666%;
+
+			&::before {
+				width: 3.9em;
+				top: 46%;
+			}
+
+			@media (max-width: 1023.98px) {
+				flex: 0 1 25%;
+			}
+
+			@media (max-width: $md3+px) {
+				flex: 0 1 50%;
+			}
+		}
+
+		& .calculator-cards__inner {
+			width: auto;
+			min-height: auto;
+			padding: 2em 1.6em 2.7em;
+		}
+
+		& .calculator-cards__title {
+			margin-bottom: 0.7em;
+
+			@media (max-width: $md4+px) {
+				font-size: 1.7em;
+			}
+		}
+
+		& .calculator-cards__icon {
+			height: 6em;
+			margin-bottom: 1.5em;
+		}
+	}
+
+	&__top-title {
+		font-size: 30px;
+		font-weight: 700;
+		line-height: 1.33em;
+		text-align: center;
+		margin-bottom: 1.53em;
+		font-weight: 700;
+		text-transform: none;
 	}
 
 	&__arrow-down {
@@ -145,7 +201,6 @@
 	}
 
 	&__body {
-
 	}
 
 	&__wrap {
@@ -165,7 +220,7 @@
 			}
 		}
 
-/*		&:nth-child(4) {
+		/*		&:nth-child(4) {
 			& .calculator-cards__title {
 				margin-bottom: 1.51em;
 			}
@@ -174,7 +229,7 @@
 		&:not(:last-child) {
 			&:before {
 				position: absolute;
-				content: '';
+				content: "";
 				width: 5.8em;
 				height: 0.9em;
 				background-color: #e9933e;
@@ -183,7 +238,7 @@
 				transform: translate(50%, -50%);
 				z-index: 2;
 
-				@media (max-width: 1024px) {
+				@media (max-width: 1023.98px) {
 					display: none;
 				}
 			}
@@ -213,7 +268,7 @@
 	}
 	&__title {
 		color: $textColor;
-		@include maintext(20,700,20);
+		@include maintext(20, 700, 20);
 		font-size: 2em;
 		line-height: 1em;
 		text-transform: uppercase;
@@ -221,7 +276,7 @@
 	}
 	&__subtitle {
 		color: #778086;
-		@include text(13,400,20);
+		@include text(13, 400, 20);
 		font-size: 1.3em;
 		line-height: 1.53em;
 		max-width: 16em;
@@ -229,18 +284,16 @@
 }
 // ==== AND CALCULATOR CARDS =====================================================
 
-
-
-
 // ==== CALCULATOR APP =====================================================
 .calculator-app {
 	padding: 53px 0 0 0;
 
-	&__body {}
+	&__body {
+	}
 
 	&__title {
 		text-align: center;
-		@include maintext(30,700,40);
+		@include maintext(30, 700, 40);
 		color: $textColor;
 		margin-bottom: 27px;
 	}
@@ -254,9 +307,6 @@
 	}
 }
 // ==== AND CALCULATOR APP =====================================================
-
-
-
 
 // ==== ENQUIRE ONLINE =====================================================
 .calculator {
@@ -303,7 +353,6 @@
 	}
 
 	& .enquire-online__link-btn {
-
 		& > a {
 			padding: 15px 32px 15px 35px;
 			justify-content: flex-start;
@@ -313,22 +362,20 @@
 				height: 25px;
 			}
 		}
-
 	}
 }
 // ==== AND ENQUIRE ONLINE =====================================================
-
-
 
 // ==== CALCULATOR FAQ =====================================================
 .calculator-faq {
 	padding: 62px 0 71px;
 
-	&__body {}
+	&__body {
+	}
 
 	&__title {
 		color: $textColor;
-		@include maintext(40,700,50);
+		@include maintext(40, 700, 50);
 		margin-bottom: 14px;
 		text-align: center;
 
@@ -339,7 +386,7 @@
 	}
 
 	&__subtitle {
-		@include text(24,400,34);
+		@include text(24, 400, 34);
 		color: #404549;
 		margin-bottom: 65px;
 		text-align: center;
@@ -352,9 +399,7 @@
 	}
 
 	&__list {
-
 		& > li {
-
 			&:not(:last-child) {
 				margin-bottom: 31px;
 				border-bottom: 1px solid #edf0f2;
@@ -363,14 +408,13 @@
 	}
 }
 
-
 .list-calculator-faq {
 	&__title {
 		position: relative;
 		display: flex;
 		justify-content: space-between;
 		padding-left: 25px;
-		@include maintext(20,700,20);
+		@include maintext(20, 700, 20);
 		text-transform: uppercase;
 		margin-bottom: 30px;
 		cursor: pointer;
@@ -378,7 +422,7 @@
 
 		&:before {
 			position: absolute;
-			content: '';
+			content: "";
 			left: 0;
 			top: 5px;
 			height: 7px;
@@ -415,7 +459,7 @@
 		}
 	}
 	&__text-collapse {
-		@include text(16,400,26);
+		@include text(16, 400, 26);
 		color: #404549;
 		max-width: 972px;
 		padding-left: 24px;
@@ -436,6 +480,5 @@
 		}
 	}
 }
-
 
 // ==== AND CALCULATOR FAQ =====================================================

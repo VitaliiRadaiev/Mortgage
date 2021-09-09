@@ -28,6 +28,7 @@
 		"gulp-webp-css": "latest",
 		"gulp-webp-html": "latest",
 		"imagemin-webp": "latest",
+		"sass": "latest",
 		"transform-runtime": "0.0.0"
 	}
 }
