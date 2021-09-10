@@ -7693,6 +7693,10 @@ textarea.input {
     width: 33.6em;
     padding: 2em 2em 2em 2em;
   }
+
+  .calculator-cards.calculator-cards_bg-white .calculator-cards__inner {
+    width: 28.6em;
+  }
 }
 
 @media (min-width: 1200px) {
