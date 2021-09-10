@@ -127,6 +127,23 @@
 		padding: 7em 0 7em;
 	}
 
+	&.calculator-cards_bg-white {
+		background-color: #fff;
+		margin-bottom: 100px;
+
+		@media (max-width: $md3+px) {
+			margin-bottom: 60px;
+		}
+		& .calculator-cards__inner {
+
+			@media (min-width: 1180px) {
+				width: 33.6em;
+				padding: 2em 2em 2em 2em;
+			}
+
+		}
+	}
+
 	&.calculator-cards_v2 {
 		background-color: transparent;
 		padding-top: 38px;
